@@ -1,0 +1,10 @@
+2025-05-20 08:35:07 - Fold-5_GPU-4 - INFO - Initializing training for Fold 5 on GPU 4.
+2025-05-20 08:35:07 - Fold-5_GPU-4 - INFO - Data YAML: /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/data.yaml
+2025-05-20 08:35:07 - Fold-5_GPU-4 - INFO - Ultralytics project dir (where Ultralytics saves its run): ./results/fold_5
+2025-05-20 08:35:07 - Fold-5_GPU-4 - INFO - Ultralytics run name: yolo_yolov10x_e3_b32_imgsz640
+2025-05-20 08:35:07 - Fold-5_GPU-4 - INFO - Python-level stdout and stderr for this fold are now redirected to: ./results/fold_5/ultralytics_output_fold_5_gpu_4.log
+2025-05-20 08:35:08 - Fold-5_GPU-4 - INFO - Loaded base model yolov10x.pt.
+2025-05-20 08:35:08 - Fold-5_GPU-4 - INFO - Starting Ultralytics training with effective hyperparameters: {'epochs': 3, 'batch': 32, 'workers': 3, 'patience': 0, 'close_mosaic': 50, 'cache': False, 'imgsz': 640, 'optimizer': 'AdamW', 'lr0': 0.0002, 'lrf': 0.01, 'weight_decay': 0.0001, 'dropout': 0.0, 'pretrained': True, 'resume': False, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.1, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.5, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0, 'copy_paste': 0.0, 'project': './results/fold_5', 'name': 'yolo_yolov10x_e3_b32_imgsz640', 'exist_ok': False, 'verbose': True, 'save_period': -1, 'seed': 0, 'data': '/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/data.yaml', 'device': '4'}
+2025-05-20 10:46:24 - Fold-5_GPU-4 - INFO - Training completed successfully.
+2025-05-20 10:46:24 - Fold-5_GPU-4 - INFO - All Ultralytics results, metrics, and model weights saved in: results/fold_5/yolo_yolov10x_e3_b32_imgsz640
+2025-05-20 10:46:24 - Fold-5_GPU-4 - INFO - Restored stdout/stderr for this fold process.

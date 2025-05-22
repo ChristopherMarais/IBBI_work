@@ -1,11 +1,13 @@
-# Ignore all .png, .npy, and .json files in a specific folder
+# Ignore images, arrays, JSON and text in phase_1_data (and subfolders)
 phase_1_data/*.png
 phase_1_data/*.npy
 phase_1_data/*.json
 phase_1_data/*.txt
-
-# If you also want to ignore in any sub-directories under that folder, use:
 phase_1_data/**/*.png
 phase_1_data/**/*.npy
 phase_1_data/**/*.json
 phase_1_data/**/*.txt
+
+# Ignore PyTorch model files everywhere
+*.pt
+*.pth

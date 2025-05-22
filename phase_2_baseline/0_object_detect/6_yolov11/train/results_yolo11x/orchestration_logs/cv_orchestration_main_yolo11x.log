@@ -1,0 +1,83 @@
+2025-05-20 12:58:37 - MainProcess - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:58:37 - MainProcess - INFO - Starting yolo11x training script. Make sure 'yolo11x.pt' is a valid model.
+2025-05-20 12:58:37 - MainProcess - INFO - MainProcess: Starting 5-fold cross-validation training orchestrator for yolo11x.pt...
+2025-05-20 12:58:37 - MainProcess - INFO - MainProcess: Base results directory set to: ./results_yolo11x
+2025-05-20 12:58:37 - MainProcess - INFO - MainProcess: Data path template: /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_{}
+2025-05-20 12:58:37 - MainProcess - INFO - MainProcess: Using model: yolo11x.pt
+2025-05-20 12:58:37 - MainProcess - INFO - MainProcess: Global Training Hyperparameters: {'epochs': 3, 'batch': 32, 'workers': 3, 'patience': 0, 'close_mosaic': 50, 'cache': False, 'imgsz': 640, 'optimizer': 'AdamW', 'lr0': 0.0002, 'lrf': 0.01, 'weight_decay': 0.0001, 'dropout': 0.0, 'pretrained': True, 'resume': False, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.1, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.5, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0, 'copy_paste': 0.0, 'project': None, 'name': None, 'exist_ok': False, 'verbose': True, 'save_period': -1, 'seed': 0}
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: PyTorch detects 5 available CUDA GPU(s).
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: GPU assignments for folds (Fold Index -> Assigned GPU ID or None for CPU):
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess:   Fold 1 (0-indexed: 0) --> GPU 0
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess:   Fold 2 (0-indexed: 1) --> GPU 1
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess:   Fold 3 (0-indexed: 2) --> GPU 2
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess:   Fold 4 (0-indexed: 3) --> GPU 3
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess:   Fold 5 (0-indexed: 4) --> GPU 4
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-1_GPU-0 for Fold 1 on GPU 0.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-2_GPU-1 for Fold 2 on GPU 1.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-3_GPU-2 for Fold 3 on GPU 2.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-4_GPU-3 for Fold 4 on GPU 3.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-5_GPU-4 for Fold 5 on GPU 4.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Starting 5 training processes...
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Process Fold-1_GPU-0 (PID: 25142) has been started.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Process Fold-2_GPU-1 (PID: 25143) has been started.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Process Fold-3_GPU-2 (PID: 25144) has been started.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Process Fold-4_GPU-3 (PID: 25145) has been started.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Process Fold-5_GPU-4 (PID: 25146) has been started.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: All training processes have been launched. Waiting for them to complete...
+2025-05-20 12:58:41 - Fold-1_GPU-0 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:58:41 - Fold-3_GPU-2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:58:41 - Fold-4_GPU-3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:58:41 - Fold-5_GPU-4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:58:41 - Fold-2_GPU-1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:43 - Process-1:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:46 - Process-1:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:47 - Process-4:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:48 - Process-5:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:48 - Process-2:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:49 - Process-3:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:50 - Process-1:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:50 - Process-4:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:52 - Process-5:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:52 - Process-2:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:52 - Process-3:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:54 - Process-4:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:55 - Process-5:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:55 - Process-2:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:55 - Process-3:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:59 - Process-1:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:02 - Process-1:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:02 - Process-4:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:04 - Process-5:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:04 - Process-1:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:04 - Process-2:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:05 - Process-4:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:05 - Process-3:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:06 - Process-5:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:07 - Process-2:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:07 - Process-1:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:08 - Process-4:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:08 - Process-3:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:09 - Process-5:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:09 - Process-2:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:10 - Process-1:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:10 - Process-4:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:10 - Process-3:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:12 - Process-5:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:12 - Process-2:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:12 - Process-1:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:13 - Process-4:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:13 - Process-3:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:15 - Process-5:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:15 - Process-2:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:15 - Process-4:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:16 - Process-3:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:17 - Process-5:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:17 - Process-2:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:19 - Process-3:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 14:49:12 - MainProcess - INFO - MainProcess: Process Fold-1_GPU-0 (PID: 25142) for Fold 1 has completed. Exit code: 0.
+2025-05-20 15:11:26 - MainProcess - INFO - MainProcess: Process Fold-2_GPU-1 (PID: 25143) for Fold 2 has completed. Exit code: 0.
+2025-05-20 15:11:26 - MainProcess - INFO - MainProcess: Process Fold-3_GPU-2 (PID: 25144) for Fold 3 has completed. Exit code: 0.
+2025-05-20 15:11:26 - MainProcess - INFO - MainProcess: Process Fold-4_GPU-3 (PID: 25145) for Fold 4 has completed. Exit code: 0.
+2025-05-20 15:11:26 - MainProcess - INFO - MainProcess: Process Fold-5_GPU-4 (PID: 25146) for Fold 5 has completed. Exit code: 0.
+2025-05-20 15:11:26 - MainProcess - INFO - MainProcess: All 5-fold cross-validation training tasks have finished processing for yolo11x.pt.
+2025-05-20 15:11:26 - MainProcess - INFO - MainProcess: Please check individual fold directories under ./results_yolo11x for detailed logs and training results.

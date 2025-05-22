@@ -1,0 +1,185 @@
+CRITICAL ERROR in Fold-2_GPU-1: [Errno 2] No such file or directory: 'yolov11x.pt'
+See ./results_yolov11x/fold_2/script_log_fold_2_gpu_1.log and ./results_yolov11x/fold_2/ultralytics_output_fold_2_gpu_1.log for details.
+CRITICAL ERROR in Fold-3_GPU-2: [Errno 2] No such file or directory: 'yolov11x.pt'
+See ./results_yolov11x/fold_3/script_log_fold_3_gpu_2.log and ./results_yolov11x/fold_3/ultralytics_output_fold_3_gpu_2.log for details.
+Process Fold-2_GPU-1:
+Process Fold-3_GPU-2:
+CRITICAL ERROR in Fold-1_GPU-0: [Errno 2] No such file or directory: 'yolov11x.pt'
+See ./results_yolov11x/fold_1/script_log_fold_1_gpu_0.log and ./results_yolov11x/fold_1/ultralytics_output_fold_1_gpu_0.log for details.
+CRITICAL ERROR in Fold-5_GPU-4: [Errno 2] No such file or directory: 'yolov11x.pt'
+See ./results_yolov11x/fold_5/script_log_fold_5_gpu_4.log and ./results_yolov11x/fold_5/ultralytics_output_fold_5_gpu_4.log for details.Process Fold-1_GPU-0:
+
+Traceback (most recent call last):
+Process Fold-5_GPU-4:
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/6_yolov11/train/yolov11_5fold.py", line 147, in train_single_fold
+    model = YOLO(MODEL_NAME_OR_PATH)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/models/yolo/model.py", line 53, in __init__
+    super().__init__(model=model, task=task, verbose=verbose)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 148, in __init__
+    self._load(model, task=task)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 292, in _load
+    self.model, self.ckpt = attempt_load_one_weight(weights)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 1334, in attempt_load_one_weight
+    ckpt, weight = torch_safe_load(weight)  # load ckpt
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 1239, in torch_safe_load
+    ckpt = torch.load(file, map_location="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/utils/patches.py", line 116, in torch_load
+    return _torch_load(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 1319, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 659, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 640, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'yolov11x.pt'
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/6_yolov11/train/yolov11_5fold.py", line 147, in train_single_fold
+    model = YOLO(MODEL_NAME_OR_PATH)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/models/yolo/model.py", line 53, in __init__
+    super().__init__(model=model, task=task, verbose=verbose)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 148, in __init__
+    self._load(model, task=task)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 292, in _load
+    self.model, self.ckpt = attempt_load_one_weight(weights)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 1334, in attempt_load_one_weight
+    ckpt, weight = torch_safe_load(weight)  # load ckpt
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 1239, in torch_safe_load
+    ckpt = torch.load(file, map_location="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/utils/patches.py", line 116, in torch_load
+    return _torch_load(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 1319, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+CRITICAL ERROR in Fold-4_GPU-3: [Errno 2] No such file or directory: 'yolov11x.pt'
+See ./results_yolov11x/fold_4/script_log_fold_4_gpu_3.log and ./results_yolov11x/fold_4/ultralytics_output_fold_4_gpu_3.log for details.  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 659, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 640, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+FileNotFoundError: [Errno 2] No such file or directory: 'yolov11x.pt'
+Traceback (most recent call last):
+Process Fold-4_GPU-3:
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/6_yolov11/train/yolov11_5fold.py", line 147, in train_single_fold
+    model = YOLO(MODEL_NAME_OR_PATH)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/models/yolo/model.py", line 53, in __init__
+    super().__init__(model=model, task=task, verbose=verbose)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 148, in __init__
+    self._load(model, task=task)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 292, in _load
+    self.model, self.ckpt = attempt_load_one_weight(weights)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 1334, in attempt_load_one_weight
+    ckpt, weight = torch_safe_load(weight)  # load ckpt
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 1239, in torch_safe_load
+    ckpt = torch.load(file, map_location="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/utils/patches.py", line 116, in torch_load
+    return _torch_load(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 1319, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 659, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 640, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'yolov11x.pt'
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/6_yolov11/train/yolov11_5fold.py", line 147, in train_single_fold
+    model = YOLO(MODEL_NAME_OR_PATH)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/models/yolo/model.py", line 53, in __init__
+    super().__init__(model=model, task=task, verbose=verbose)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 148, in __init__
+    self._load(model, task=task)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 292, in _load
+    self.model, self.ckpt = attempt_load_one_weight(weights)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 1334, in attempt_load_one_weight
+    ckpt, weight = torch_safe_load(weight)  # load ckpt
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 1239, in torch_safe_load
+    ckpt = torch.load(file, map_location="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/utils/patches.py", line 116, in torch_load
+    return _torch_load(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 1319, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 659, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 640, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'yolov11x.pt'
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/6_yolov11/train/yolov11_5fold.py", line 147, in train_single_fold
+    model = YOLO(MODEL_NAME_OR_PATH)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/models/yolo/model.py", line 53, in __init__
+    super().__init__(model=model, task=task, verbose=verbose)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 148, in __init__
+    self._load(model, task=task)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 292, in _load
+    self.model, self.ckpt = attempt_load_one_weight(weights)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 1334, in attempt_load_one_weight
+    ckpt, weight = torch_safe_load(weight)  # load ckpt
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 1239, in torch_safe_load
+    ckpt = torch.load(file, map_location="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/utils/patches.py", line 116, in torch_load
+    return _torch_load(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 1319, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 659, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/serialization.py", line 640, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'yolov11x.pt'

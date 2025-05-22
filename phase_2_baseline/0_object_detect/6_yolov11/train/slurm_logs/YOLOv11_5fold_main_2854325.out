@@ -1,0 +1,486 @@
+Starting YOLOv11 5-Fold Training Script
+Job ID: 2854325
+Running on host: c1007a-s23.ufhpc
+Assigned GPUs: 0,1,2,3,4
+Current working directory: /home/gmarais/hulcr-blue/gmarais/PhD/phase_2_baseline/0_object_detection/6_yolov11/train
+Activating conda environment: EEL
+Conda environment activated.
+Python version: Python 3.11.10
+PyTorch version: 2.5.1+cu124
+CUDA available to PyTorch: True
+Number of GPUs PyTorch sees: 5
+Changed directory to: /blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/6_yolov11/train
+Running Python script: yolov11_5fold.py
+2025-05-20 12:58:37 - MainProcess - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:58:37 - MainProcess - INFO - Starting yolo11x training script. Make sure 'yolo11x.pt' is a valid model.
+2025-05-20 12:58:37 - MainProcess - INFO - MainProcess: Starting 5-fold cross-validation training orchestrator for yolo11x.pt...
+2025-05-20 12:58:37 - MainProcess - INFO - MainProcess: Base results directory set to: ./results_yolo11x
+2025-05-20 12:58:37 - MainProcess - INFO - MainProcess: Data path template: /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_{}
+2025-05-20 12:58:37 - MainProcess - INFO - MainProcess: Using model: yolo11x.pt
+2025-05-20 12:58:37 - MainProcess - INFO - MainProcess: Global Training Hyperparameters: {'epochs': 3, 'batch': 32, 'workers': 3, 'patience': 0, 'close_mosaic': 50, 'cache': False, 'imgsz': 640, 'optimizer': 'AdamW', 'lr0': 0.0002, 'lrf': 0.01, 'weight_decay': 0.0001, 'dropout': 0.0, 'pretrained': True, 'resume': False, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.1, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.5, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0, 'copy_paste': 0.0, 'project': None, 'name': None, 'exist_ok': False, 'verbose': True, 'save_period': -1, 'seed': 0}
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: PyTorch detects 5 available CUDA GPU(s).
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: GPU assignments for folds (Fold Index -> Assigned GPU ID or None for CPU):
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess:   Fold 1 (0-indexed: 0) --> GPU 0
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess:   Fold 2 (0-indexed: 1) --> GPU 1
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess:   Fold 3 (0-indexed: 2) --> GPU 2
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess:   Fold 4 (0-indexed: 3) --> GPU 3
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess:   Fold 5 (0-indexed: 4) --> GPU 4
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-1_GPU-0 for Fold 1 on GPU 0.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-2_GPU-1 for Fold 2 on GPU 1.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-3_GPU-2 for Fold 3 on GPU 2.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-4_GPU-3 for Fold 4 on GPU 3.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-5_GPU-4 for Fold 5 on GPU 4.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Starting 5 training processes...
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Process Fold-1_GPU-0 (PID: 25142) has been started.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Process Fold-2_GPU-1 (PID: 25143) has been started.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Process Fold-3_GPU-2 (PID: 25144) has been started.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Process Fold-4_GPU-3 (PID: 25145) has been started.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: Process Fold-5_GPU-4 (PID: 25146) has been started.
+2025-05-20 12:58:39 - MainProcess - INFO - MainProcess: All training processes have been launched. Waiting for them to complete...
+WARNING ⚠️ Error decoding JSON from /home/gmarais/.config/Ultralytics/settings.json. Starting with an empty dictionary.
+Creating new Ultralytics Settings v0.0.6 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '/home/gmarais/.config/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+2025-05-20 12:58:41 - Fold-1_GPU-0 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:58:41 - Fold-3_GPU-2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:58:41 - Fold-4_GPU-3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:58:41 - Fold-5_GPU-4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:58:41 - Fold-2_GPU-1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+New https://pypi.org/project/ultralytics/8.3.140 available 😃 Update with 'pip install -U ultralytics'
+New https://pypi.org/project/ultralytics/8.3.140 available 😃 Update with 'pip install -U ultralytics'
+New https://pypi.org/project/ultralytics/8.3.140 available 😃 Update with 'pip install -U ultralytics'
+New https://pypi.org/project/ultralytics/8.3.140 available 😃 Update with 'pip install -U ultralytics'
+New https://pypi.org/project/ultralytics/8.3.140 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:2 (NVIDIA A100-SXM4-80GB, 81038MiB)
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:0 (NVIDIA A100-SXM4-80GB, 81038MiB)
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:4 (NVIDIA A100-SXM4-80GB, 81038MiB)
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:1 (NVIDIA A100-SXM4-80GB, 81038MiB)
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:3 (NVIDIA A100-SXM4-80GB, 81038MiB)
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=50, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/data.yaml, degrees=0.0, deterministic=True, device=0, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=3, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.5, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.0002, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolo11x.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=yolo11x_e3_b32_imgsz640, nbs=64, nms=False, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=./results_yolo11x/fold_1, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=results_yolo11x/fold_1/yolo11x_e3_b32_imgsz640, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0001, workers=3, workspace=None
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=50, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/data.yaml, degrees=0.0, deterministic=True, device=4, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=3, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.5, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.0002, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolo11x.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=yolo11x_e3_b32_imgsz640, nbs=64, nms=False, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=./results_yolo11x/fold_5, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=results_yolo11x/fold_5/yolo11x_e3_b32_imgsz640, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0001, workers=3, workspace=None
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=50, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/data.yaml, degrees=0.0, deterministic=True, device=1, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=3, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.5, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.0002, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolo11x.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=yolo11x_e3_b32_imgsz640, nbs=64, nms=False, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=./results_yolo11x/fold_2, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=results_yolo11x/fold_2/yolo11x_e3_b32_imgsz640, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0001, workers=3, workspace=None
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=50, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/data.yaml, degrees=0.0, deterministic=True, device=2, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=3, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.5, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.0002, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolo11x.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=yolo11x_e3_b32_imgsz640, nbs=64, nms=False, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=./results_yolo11x/fold_3, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=results_yolo11x/fold_3/yolo11x_e3_b32_imgsz640, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0001, workers=3, workspace=None
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=50, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/data.yaml, degrees=0.0, deterministic=True, device=3, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=3, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.5, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.0002, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolo11x.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=yolo11x_e3_b32_imgsz640, nbs=64, nms=False, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=./results_yolo11x/fold_4, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=results_yolo11x/fold_4/yolo11x_e3_b32_imgsz640, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0001, workers=3, workspace=None
+Overriding model.yaml nc=80 with nc=1
+Overriding model.yaml nc=80 with nc=1
+Overriding model.yaml nc=80 with nc=1
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments                     
+
+                   from  n    params  module                                       arguments                     
+
+                   from  n    params  module                                       arguments                     
+
+                   from  n    params  module                                       arguments                     
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1      2784  ultralytics.nn.modules.conv.Conv             [3, 96, 3, 2]                 
+  0                  -1  1      2784  ultralytics.nn.modules.conv.Conv             [3, 96, 3, 2]                 
+  0                  -1  1      2784  ultralytics.nn.modules.conv.Conv             [3, 96, 3, 2]                 
+  0                  -1  1      2784  ultralytics.nn.modules.conv.Conv             [3, 96, 3, 2]                 
+  0                  -1  1      2784  ultralytics.nn.modules.conv.Conv             [3, 96, 3, 2]                 
+  1                  -1  1    166272  ultralytics.nn.modules.conv.Conv             [96, 192, 3, 2]               
+  1                  -1  1    166272  ultralytics.nn.modules.conv.Conv             [96, 192, 3, 2]               
+  1                  -1  1    166272  ultralytics.nn.modules.conv.Conv             [96, 192, 3, 2]               
+  1                  -1  1    166272  ultralytics.nn.modules.conv.Conv             [96, 192, 3, 2]               
+  1                  -1  1    166272  ultralytics.nn.modules.conv.Conv             [96, 192, 3, 2]               
+  2                  -1  2    389760  ultralytics.nn.modules.block.C3k2            [192, 384, 2, True, 0.25]     
+  2                  -1  2    389760  ultralytics.nn.modules.block.C3k2            [192, 384, 2, True, 0.25]     
+  2                  -1  2    389760  ultralytics.nn.modules.block.C3k2            [192, 384, 2, True, 0.25]     
+  2                  -1  2    389760  ultralytics.nn.modules.block.C3k2            [192, 384, 2, True, 0.25]     
+  2                  -1  2    389760  ultralytics.nn.modules.block.C3k2            [192, 384, 2, True, 0.25]     
+  3                  -1  1   1327872  ultralytics.nn.modules.conv.Conv             [384, 384, 3, 2]              
+  3                  -1  1   1327872  ultralytics.nn.modules.conv.Conv             [384, 384, 3, 2]              
+  3                  -1  1   1327872  ultralytics.nn.modules.conv.Conv             [384, 384, 3, 2]              
+  3                  -1  1   1327872  ultralytics.nn.modules.conv.Conv             [384, 384, 3, 2]              
+  3                  -1  1   1327872  ultralytics.nn.modules.conv.Conv             [384, 384, 3, 2]              
+  4                  -1  2   1553664  ultralytics.nn.modules.block.C3k2            [384, 768, 2, True, 0.25]     
+  4                  -1  2   1553664  ultralytics.nn.modules.block.C3k2            [384, 768, 2, True, 0.25]     
+  4                  -1  2   1553664  ultralytics.nn.modules.block.C3k2            [384, 768, 2, True, 0.25]     
+  4                  -1  2   1553664  ultralytics.nn.modules.block.C3k2            [384, 768, 2, True, 0.25]     
+  4                  -1  2   1553664  ultralytics.nn.modules.block.C3k2            [384, 768, 2, True, 0.25]     
+  5                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+  5                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+  5                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+  5                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+  5                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+  6                  -1  2   5022720  ultralytics.nn.modules.block.C3k2            [768, 768, 2, True]           
+  6                  -1  2   5022720  ultralytics.nn.modules.block.C3k2            [768, 768, 2, True]           
+  6                  -1  2   5022720  ultralytics.nn.modules.block.C3k2            [768, 768, 2, True]           
+  6                  -1  2   5022720  ultralytics.nn.modules.block.C3k2            [768, 768, 2, True]           
+  7                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+  6                  -1  2   5022720  ultralytics.nn.modules.block.C3k2            [768, 768, 2, True]           
+  7                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+  7                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+  7                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+  7                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+  8                  -1  2   5022720  ultralytics.nn.modules.block.C3k2            [768, 768, 2, True]           
+  8                  -1  2   5022720  ultralytics.nn.modules.block.C3k2            [768, 768, 2, True]           
+  8                  -1  2   5022720  ultralytics.nn.modules.block.C3k2            [768, 768, 2, True]           
+  8                  -1  2   5022720  ultralytics.nn.modules.block.C3k2            [768, 768, 2, True]           
+  9                  -1  1   1476864  ultralytics.nn.modules.block.SPPF            [768, 768, 5]                 
+  9                  -1  1   1476864  ultralytics.nn.modules.block.SPPF            [768, 768, 5]                 
+  9                  -1  1   1476864  ultralytics.nn.modules.block.SPPF            [768, 768, 5]                 
+  9                  -1  1   1476864  ultralytics.nn.modules.block.SPPF            [768, 768, 5]                 
+ 10                  -1  2   3264768  ultralytics.nn.modules.block.C2PSA           [768, 768, 2]                 
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 10                  -1  2   3264768  ultralytics.nn.modules.block.C2PSA           [768, 768, 2]                 
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 10                  -1  2   3264768  ultralytics.nn.modules.block.C2PSA           [768, 768, 2]                 
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 10                  -1  2   3264768  ultralytics.nn.modules.block.C2PSA           [768, 768, 2]                 
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+  8                  -1  2   5022720  ultralytics.nn.modules.block.C3k2            [768, 768, 2, True]           
+  9                  -1  1   1476864  ultralytics.nn.modules.block.SPPF            [768, 768, 5]                 
+ 10                  -1  2   3264768  ultralytics.nn.modules.block.C2PSA           [768, 768, 2]                 
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 13                  -1  2   5612544  ultralytics.nn.modules.block.C3k2            [1536, 768, 2, True]          
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 13                  -1  2   5612544  ultralytics.nn.modules.block.C3k2            [1536, 768, 2, True]          
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 13                  -1  2   5612544  ultralytics.nn.modules.block.C3k2            [1536, 768, 2, True]          
+ 13                  -1  2   5612544  ultralytics.nn.modules.block.C3k2            [1536, 768, 2, True]          
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 16                  -1  2   1700352  ultralytics.nn.modules.block.C3k2            [1536, 384, 2, True]          
+ 16                  -1  2   1700352  ultralytics.nn.modules.block.C3k2            [1536, 384, 2, True]          
+ 17                  -1  1   1327872  ultralytics.nn.modules.conv.Conv             [384, 384, 3, 2]              
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 16                  -1  2   1700352  ultralytics.nn.modules.block.C3k2            [1536, 384, 2, True]          
+ 16                  -1  2   1700352  ultralytics.nn.modules.block.C3k2            [1536, 384, 2, True]          
+ 17                  -1  1   1327872  ultralytics.nn.modules.conv.Conv             [384, 384, 3, 2]              
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 17                  -1  1   1327872  ultralytics.nn.modules.conv.Conv             [384, 384, 3, 2]              
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 17                  -1  1   1327872  ultralytics.nn.modules.conv.Conv             [384, 384, 3, 2]              
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 13                  -1  2   5612544  ultralytics.nn.modules.block.C3k2            [1536, 768, 2, True]          
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 19                  -1  2   5317632  ultralytics.nn.modules.block.C3k2            [1152, 768, 2, True]          
+ 16                  -1  2   1700352  ultralytics.nn.modules.block.C3k2            [1536, 384, 2, True]          
+ 19                  -1  2   5317632  ultralytics.nn.modules.block.C3k2            [1152, 768, 2, True]          
+ 19                  -1  2   5317632  ultralytics.nn.modules.block.C3k2            [1152, 768, 2, True]          
+ 17                  -1  1   1327872  ultralytics.nn.modules.conv.Conv             [384, 384, 3, 2]              
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 19                  -1  2   5317632  ultralytics.nn.modules.block.C3k2            [1152, 768, 2, True]          
+ 20                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 20                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 20                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 20                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 22                  -1  2   5612544  ultralytics.nn.modules.block.C3k2            [1536, 768, 2, True]          
+ 19                  -1  2   5317632  ultralytics.nn.modules.block.C3k2            [1152, 768, 2, True]          
+ 22                  -1  2   5612544  ultralytics.nn.modules.block.C3k2            [1536, 768, 2, True]          
+ 22                  -1  2   5612544  ultralytics.nn.modules.block.C3k2            [1536, 768, 2, True]          
+ 22                  -1  2   5612544  ultralytics.nn.modules.block.C3k2            [1536, 768, 2, True]          
+ 20                  -1  1   5309952  ultralytics.nn.modules.conv.Conv             [768, 768, 3, 2]              
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 22                  -1  2   5612544  ultralytics.nn.modules.block.C3k2            [1536, 768, 2, True]          
+ 23        [16, 19, 22]  1   3146707  ultralytics.nn.modules.head.Detect           [1, [384, 768, 768]]          
+ 23        [16, 19, 22]  1   3146707  ultralytics.nn.modules.head.Detect           [1, [384, 768, 768]]          
+ 23        [16, 19, 22]  1   3146707  ultralytics.nn.modules.head.Detect           [1, [384, 768, 768]]          
+ 23        [16, 19, 22]  1   3146707  ultralytics.nn.modules.head.Detect           [1, [384, 768, 768]]          
+ 23        [16, 19, 22]  1   3146707  ultralytics.nn.modules.head.Detect           [1, [384, 768, 768]]          
+YOLO11x summary: 357 layers, 56,874,931 parameters, 56,874,915 gradients, 195.4 GFLOPs
+YOLO11x summary: 357 layers, 56,874,931 parameters, 56,874,915 gradients, 195.4 GFLOPs
+
+YOLO11x summary: 357 layers, 56,874,931 parameters, 56,874,915 gradients, 195.4 GFLOPs
+YOLO11x summary: 357 layers, 56,874,931 parameters, 56,874,915 gradients, 195.4 GFLOPs
+
+
+
+YOLO11x summary: 357 layers, 56,874,931 parameters, 56,874,915 gradients, 195.4 GFLOPs
+
+Transferred 1009/1015 items from pretrained weights
+Transferred 1009/1015 items from pretrained weights
+Transferred 1009/1015 items from pretrained weights
+Transferred 1009/1015 items from pretrained weights
+Transferred 1009/1015 items from pretrained weights
+Freezing layer 'model.23.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+Freezing layer 'model.23.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+Freezing layer 'model.23.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+Freezing layer 'model.23.dfl.conv.weight'
+Freezing layer 'model.23.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.3±0.1 ms, read: 91.2±75.2 MB/s, size: 364.4 KB)
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.4±0.2 ms, read: 197.1±233.3 MB/s, size: 3717.6 KB)
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.3±0.1 ms, read: 63.9±57.1 MB/s, size: 3372.4 KB)
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.4±0.1 ms, read: 133.0±46.6 MB/s, size: 7049.6 KB)
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.4±0.1 ms, read: 176.1±120.8 MB/s, size: 4122.8 KB)
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/0216be816e3ac9f15436610a5ccdb513.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/33e0a711d4ef0fe2dec0f438502fc07a.png: 1 duplicate labels removed
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/3f5405046e601f90f613687d81b99c02.png: ignoring corrupt image/label: Image size (200873929 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/878cd5d10f030a887f20a5e2fb782f45.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/8daa92e6ef24f0b24aa50ce1ed73e0fd.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/efbe79374ab7e9d164da85582cac410e.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/f1ca84f00f77582c7b01fa17c605942e.png: ignoring corrupt image/label: Truncated File Read
+2025-05-20 12:59:43 - Process-1:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/019b8357606179cf210c6c570d55be08.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/139e1cc74c2bec9084204ecdf79c4cf5.png: ignoring corrupt image/label: Image size (261150375 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/33e0a711d4ef0fe2dec0f438502fc07a.png: 1 duplicate labels removed
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/3f5405046e601f90f613687d81b99c02.png: ignoring corrupt image/label: Image size (200873929 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/7635c238b564f40029a46ada18c36464.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/76e59b26d2184160993fc4b535876897.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/77739e5d9f7b612a075a842b7f83321f.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/878cd5d10f030a887f20a5e2fb782f45.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/8daa92e6ef24f0b24aa50ce1ed73e0fd.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/b559392f603d6fea3d046ef48e322b77.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/efbe79374ab7e9d164da85582cac410e.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/019b8357606179cf210c6c570d55be08.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/0216be816e3ac9f15436610a5ccdb513.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/139e1cc74c2bec9084204ecdf79c4cf5.png: ignoring corrupt image/label: Image size (261150375 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/33e0a711d4ef0fe2dec0f438502fc07a.png: 1 duplicate labels removed
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/7635c238b564f40029a46ada18c36464.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/76e59b26d2184160993fc4b535876897.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/77739e5d9f7b612a075a842b7f83321f.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/878cd5d10f030a887f20a5e2fb782f45.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/8daa92e6ef24f0b24aa50ce1ed73e0fd.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/b559392f603d6fea3d046ef48e322b77.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/efbe79374ab7e9d164da85582cac410e.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/f1ca84f00f77582c7b01fa17c605942e.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/019b8357606179cf210c6c570d55be08.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/0216be816e3ac9f15436610a5ccdb513.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/33e0a711d4ef0fe2dec0f438502fc07a.png: 1 duplicate labels removed
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/3f5405046e601f90f613687d81b99c02.png: ignoring corrupt image/label: Image size (200873929 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/7635c238b564f40029a46ada18c36464.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/76e59b26d2184160993fc4b535876897.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/77739e5d9f7b612a075a842b7f83321f.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/b559392f603d6fea3d046ef48e322b77.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/efbe79374ab7e9d164da85582cac410e.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/f1ca84f00f77582c7b01fa17c605942e.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/019b8357606179cf210c6c570d55be08.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/0216be816e3ac9f15436610a5ccdb513.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/139e1cc74c2bec9084204ecdf79c4cf5.png: ignoring corrupt image/label: Image size (261150375 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/3f5405046e601f90f613687d81b99c02.png: ignoring corrupt image/label: Image size (200873929 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/7635c238b564f40029a46ada18c36464.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/76e59b26d2184160993fc4b535876897.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/77739e5d9f7b612a075a842b7f83321f.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/878cd5d10f030a887f20a5e2fb782f45.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/8daa92e6ef24f0b24aa50ce1ed73e0fd.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/b559392f603d6fea3d046ef48e322b77.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/f1ca84f00f77582c7b01fa17c605942e.png: ignoring corrupt image/label: Truncated File Read
+2025-05-20 12:59:46 - Process-1:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:47 - Process-4:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:48 - Process-5:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:48 - Process-2:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:49 - Process-3:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:50 - Process-1:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:50 - Process-4:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+[34m[1mval: [0mFast image access ✅ (ping: 0.5±0.5 ms, read: 58.5±45.0 MB/s, size: 949.3 KB)
+2025-05-20 12:59:52 - Process-5:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:52 - Process-2:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:52 - Process-3:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:54 - Process-4:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+[34m[1mval: [0mFast image access ✅ (ping: 0.3±0.1 ms, read: 142.4±95.0 MB/s, size: 1368.6 KB)
+2025-05-20 12:59:55 - Process-5:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:55 - Process-2:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:59:55 - Process-3:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+[34m[1mval: [0mFast image access ✅ (ping: 0.8±1.2 ms, read: 59.6±61.4 MB/s, size: 124.6 KB)
+[34m[1mval: [0mFast image access ✅ (ping: 1.4±2.3 ms, read: 106.1±113.7 MB/s, size: 2242.1 KB)
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/val/019b8357606179cf210c6c570d55be08.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/val/7635c238b564f40029a46ada18c36464.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/val/76e59b26d2184160993fc4b535876897.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/val/77739e5d9f7b612a075a842b7f83321f.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/val/b559392f603d6fea3d046ef48e322b77.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mval: [0mFast image access ✅ (ping: 0.4±0.1 ms, read: 102.5±57.2 MB/s, size: 1806.5 KB)
+2025-05-20 12:59:59 - Process-1:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/val/0216be816e3ac9f15436610a5ccdb513.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/val/f1ca84f00f77582c7b01fa17c605942e.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/val/3f5405046e601f90f613687d81b99c02.png: ignoring corrupt image/label: Image size (200873929 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+2025-05-20 13:00:02 - Process-1:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/val/139e1cc74c2bec9084204ecdf79c4cf5.png: ignoring corrupt image/label: Image size (261150375 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/val/878cd5d10f030a887f20a5e2fb782f45.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/val/8daa92e6ef24f0b24aa50ce1ed73e0fd.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/val/33e0a711d4ef0fe2dec0f438502fc07a.png: 1 duplicate labels removed
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/val/efbe79374ab7e9d164da85582cac410e.png: ignoring corrupt image/label: Truncated File Read
+2025-05-20 13:00:02 - Process-4:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:04 - Process-5:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:04 - Process-1:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:04 - Process-2:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:05 - Process-4:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:05 - Process-3:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:06 - Process-5:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:07 - Process-2:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:07 - Process-1:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:08 - Process-4:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:08 - Process-3:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:09 - Process-5:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:09 - Process-2:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:10 - Process-1:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:10 - Process-4:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:10 - Process-3:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:12 - Process-5:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:12 - Process-2:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:12 - Process-1:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:13 - Process-4:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:13 - Process-3:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:15 - Process-5:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:15 - Process-2:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:15 - Process-4:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:16 - Process-3:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:17 - Process-5:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:17 - Process-2:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 13:00:19 - Process-3:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+Plotting labels to results_yolo11x/fold_2/yolo11x_e3_b32_imgsz640/labels.jpg... 
+Plotting labels to results_yolo11x/fold_5/yolo11x_e3_b32_imgsz640/labels.jpg... 
+Plotting labels to results_yolo11x/fold_1/yolo11x_e3_b32_imgsz640/labels.jpg... 
+Plotting labels to results_yolo11x/fold_4/yolo11x_e3_b32_imgsz640/labels.jpg... 
+Plotting labels to results_yolo11x/fold_3/yolo11x_e3_b32_imgsz640/labels.jpg... 
+[34m[1moptimizer:[0m AdamW(lr=0.0002, momentum=0.937) with parameter groups 167 weight(decay=0.0), 174 weight(decay=0.0001), 173 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 3 dataloader workers
+Logging results to [1mresults_yolo11x/fold_1/yolo11x_e3_b32_imgsz640[0m
+Starting training for 3 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[34m[1moptimizer:[0m AdamW(lr=0.0002, momentum=0.937) with parameter groups 167 weight(decay=0.0), 174 weight(decay=0.0001), 173 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 3 dataloader workers
+Logging results to [1mresults_yolo11x/fold_3/yolo11x_e3_b32_imgsz640[0m
+Starting training for 3 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[34m[1moptimizer:[0m AdamW(lr=0.0002, momentum=0.937) with parameter groups 167 weight(decay=0.0), 174 weight(decay=0.0001), 173 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 3 dataloader workers
+Logging results to [1mresults_yolo11x/fold_4/yolo11x_e3_b32_imgsz640[0m
+Starting training for 3 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[34m[1moptimizer:[0m AdamW(lr=0.0002, momentum=0.937) with parameter groups 167 weight(decay=0.0), 174 weight(decay=0.0001), 173 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 3 dataloader workers
+Logging results to [1mresults_yolo11x/fold_2/yolo11x_e3_b32_imgsz640[0m
+Starting training for 3 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[34m[1moptimizer:[0m AdamW(lr=0.0002, momentum=0.937) with parameter groups 167 weight(decay=0.0), 174 weight(decay=0.0001), 173 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 3 dataloader workers
+Logging results to [1mresults_yolo11x/fold_5/yolo11x_e3_b32_imgsz640[0m
+Starting training for 3 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       9835      30949      0.883      0.921      0.961      0.713
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       9838      31104      0.968      0.966      0.985      0.711
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       9838      31151      0.908       0.93       0.97      0.716
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       9839      31188       0.95      0.952      0.979      0.723
+                   all       9837      30936      0.945      0.937      0.975      0.739
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       9835      30949      0.884      0.938       0.97      0.788
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       9838      31104       0.86      0.967      0.971        0.8
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       9838      31151      0.937      0.941      0.976      0.793
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       9839      31188      0.975      0.941      0.982      0.844
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       9837      30936      0.929      0.959      0.982      0.779
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       9835      30949      0.942      0.971      0.985      0.834
+
+3 epochs completed in 1.725 hours.
+Optimizer stripped from results_yolo11x/fold_1/yolo11x_e3_b32_imgsz640/weights/last.pt, 114.4MB
+Optimizer stripped from results_yolo11x/fold_1/yolo11x_e3_b32_imgsz640/weights/best.pt, 114.4MB
+
+Validating results_yolo11x/fold_1/yolo11x_e3_b32_imgsz640/weights/best.pt...
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:0 (NVIDIA A100-SXM4-80GB, 81038MiB)
+YOLO11x summary (fused): 190 layers, 56,828,179 parameters, 0 gradients, 194.4 GFLOPs
+                   all       9835      30949      0.941      0.971      0.984      0.834
+Speed: 0.1ms preprocess, 2.5ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to [1mresults_yolo11x/fold_1/yolo11x_e3_b32_imgsz640[0m
+2025-05-20 14:49:12 - MainProcess - INFO - MainProcess: Process Fold-1_GPU-0 (PID: 25142) for Fold 1 has completed. Exit code: 0.
+                   all       9838      31104      0.951      0.969      0.985      0.818
+
+3 epochs completed in 2.067 hours.
+Optimizer stripped from results_yolo11x/fold_4/yolo11x_e3_b32_imgsz640/weights/last.pt, 114.4MB
+Optimizer stripped from results_yolo11x/fold_4/yolo11x_e3_b32_imgsz640/weights/best.pt, 114.4MB
+
+Validating results_yolo11x/fold_4/yolo11x_e3_b32_imgsz640/weights/best.pt...
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:3 (NVIDIA A100-SXM4-80GB, 81038MiB)
+YOLO11x summary (fused): 190 layers, 56,828,179 parameters, 0 gradients, 194.4 GFLOPs
+                   all       9839      31188      0.984       0.97      0.987      0.877
+
+3 epochs completed in 2.084 hours.
+Optimizer stripped from results_yolo11x/fold_3/yolo11x_e3_b32_imgsz640/weights/last.pt, 114.4MB
+Optimizer stripped from results_yolo11x/fold_3/yolo11x_e3_b32_imgsz640/weights/best.pt, 114.4MB
+
+Validating results_yolo11x/fold_3/yolo11x_e3_b32_imgsz640/weights/best.pt...
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:2 (NVIDIA A100-SXM4-80GB, 81038MiB)
+YOLO11x summary (fused): 190 layers, 56,828,179 parameters, 0 gradients, 194.4 GFLOPs
+                   all       9838      31151      0.922      0.963      0.979       0.84
+
+3 epochs completed in 2.090 hours.
+Optimizer stripped from results_yolo11x/fold_5/yolo11x_e3_b32_imgsz640/weights/last.pt, 114.4MB
+Optimizer stripped from results_yolo11x/fold_5/yolo11x_e3_b32_imgsz640/weights/best.pt, 114.4MB
+
+Validating results_yolo11x/fold_5/yolo11x_e3_b32_imgsz640/weights/best.pt...
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:4 (NVIDIA A100-SXM4-80GB, 81038MiB)
+YOLO11x summary (fused): 190 layers, 56,828,179 parameters, 0 gradients, 194.4 GFLOPs
+                   all       9837      30936      0.944      0.964      0.983      0.837
+
+3 epochs completed in 2.098 hours.
+Optimizer stripped from results_yolo11x/fold_2/yolo11x_e3_b32_imgsz640/weights/last.pt, 114.4MB
+Optimizer stripped from results_yolo11x/fold_2/yolo11x_e3_b32_imgsz640/weights/best.pt, 114.4MB
+
+Validating results_yolo11x/fold_2/yolo11x_e3_b32_imgsz640/weights/best.pt...
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:1 (NVIDIA A100-SXM4-80GB, 81038MiB)
+YOLO11x summary (fused): 190 layers, 56,828,179 parameters, 0 gradients, 194.4 GFLOPs
+                   all       9838      31104       0.95      0.969      0.985      0.818
+Speed: 0.1ms preprocess, 2.6ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to [1mresults_yolo11x/fold_4/yolo11x_e3_b32_imgsz640[0m
+                   all       9839      31188      0.984       0.97      0.987      0.877
+Speed: 0.1ms preprocess, 2.6ms inference, 0.0ms loss, 0.8ms postprocess per image
+Results saved to [1mresults_yolo11x/fold_3/yolo11x_e3_b32_imgsz640[0m
+                   all       9838      31151      0.922      0.963      0.979       0.84
+Speed: 0.1ms preprocess, 2.5ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to [1mresults_yolo11x/fold_5/yolo11x_e3_b32_imgsz640[0m
+                   all       9837      30936      0.944      0.964      0.983      0.836
+Speed: 0.1ms preprocess, 2.6ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to [1mresults_yolo11x/fold_2/yolo11x_e3_b32_imgsz640[0m
+2025-05-20 15:11:26 - MainProcess - INFO - MainProcess: Process Fold-2_GPU-1 (PID: 25143) for Fold 2 has completed. Exit code: 0.
+2025-05-20 15:11:26 - MainProcess - INFO - MainProcess: Process Fold-3_GPU-2 (PID: 25144) for Fold 3 has completed. Exit code: 0.
+2025-05-20 15:11:26 - MainProcess - INFO - MainProcess: Process Fold-4_GPU-3 (PID: 25145) for Fold 4 has completed. Exit code: 0.
+2025-05-20 15:11:26 - MainProcess - INFO - MainProcess: Process Fold-5_GPU-4 (PID: 25146) for Fold 5 has completed. Exit code: 0.
+2025-05-20 15:11:26 - MainProcess - INFO - MainProcess: All 5-fold cross-validation training tasks have finished processing for yolo11x.pt.
+2025-05-20 15:11:26 - MainProcess - INFO - MainProcess: Please check individual fold directories under ./results_yolo11x for detailed logs and training results.
+Python script finished.
+End of Slurm job.

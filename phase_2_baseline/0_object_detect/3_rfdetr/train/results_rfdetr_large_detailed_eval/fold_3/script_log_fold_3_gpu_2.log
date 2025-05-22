@@ -1,0 +1,26 @@
+2025-05-20 13:30:19 - Fold-3_GPU-2_RFDETRLarge - INFO - Initializing training for Fold 3 on GPU 2 with model RFDETRLarge.
+2025-05-20 13:30:19 - Fold-3_GPU-2_RFDETRLarge - ERROR - CRITICAL - COCO annotations for train or valid not found in /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/coco_formatted_data/cv_iteration_3. Skipping fold.
+2025-05-20 14:25:19 - Fold-3_GPU-2_RFDETRLarge - INFO - Initializing training for Fold 3 on GPU 2 with model RFDETRLarge.
+2025-05-20 14:25:19 - Fold-3_GPU-2_RFDETRLarge - ERROR - CRITICAL - COCO annotations for train or valid not found in /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3. Skipping fold.
+2025-05-20 18:45:30 - Fold-3_GPU-2_RFDETRLarge - INFO - Initializing training for Fold 3 on GPU 2 with model RFDETRLarge.
+2025-05-20 18:45:30 - Fold-3_GPU-2_RFDETRLarge - INFO - Dataset root for fold 3: /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3
+2025-05-20 18:45:30 - Fold-3_GPU-2_RFDETRLarge - INFO - Expecting TRAIN annotations at: /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3/annotations/instances_train.json
+2025-05-20 18:45:30 - Fold-3_GPU-2_RFDETRLarge - INFO - Expecting TRAIN images in: /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3/train
+2025-05-20 18:45:30 - Fold-3_GPU-2_RFDETRLarge - INFO - Expecting VALID annotations (for custom eval) at: /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3/annotations/instances_val.json
+2025-05-20 18:45:30 - Fold-3_GPU-2_RFDETRLarge - INFO - Expecting VALID images (for custom eval) in: /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3/val
+2025-05-20 18:45:31 - Fold-3_GPU-2_RFDETRLarge - INFO - Python-level stdout/stderr redirected to: ./results_rfdetr_large_detailed_eval/fold_3/rfdetr_library_output_fold_3_gpu_2.log
+2025-05-20 18:46:03 - Fold-3_GPU-2_RFDETRLarge - INFO - Instantiated RFDETRLarge model.
+2025-05-20 18:46:03 - Fold-3_GPU-2_RFDETRLarge - INFO - Set CUDA_VISIBLE_DEVICES=2
+2025-05-20 18:46:03 - Fold-3_GPU-2_RFDETRLarge - INFO - Starting RFDETR training with parameters: {'epochs': 3, 'batch_size': 1, 'grad_accum_steps': 32, 'lr': 0.0001, 'dataset_dir': '/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3', 'output_dir': './results_rfdetr_large_detailed_eval/fold_3/rfdetr_training_output', 'device': '2'}
+2025-05-20 18:46:03 - Fold-3_GPU-2_RFDETRLarge - ERROR - An error occurred during RFDETR training: [Errno 2] No such file or directory: '/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3/train/_annotations.coco.json'
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/3_rfdetr/train/rfdetr_5fold.py", line 310, in train_single_fold
+    model_rf.train(**current_train_params)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/detr.py", line 36, in train
+    self.train_from_config(config, **kwargs)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/detr.py", line 42, in train_from_config
+    with open(
+         ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3/train/_annotations.coco.json'
+2025-05-20 18:46:03 - Fold-3_GPU-2_RFDETRLarge - INFO - Restored stdout/stderr for this fold process.
+2025-05-20 18:46:03 - Fold-3_GPU-2_RFDETRLarge - ERROR - Training was not successful. Skipping metrics parsing and custom evaluation.

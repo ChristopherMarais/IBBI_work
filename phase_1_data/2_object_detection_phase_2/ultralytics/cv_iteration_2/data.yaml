@@ -1,0 +1,6 @@
+path: /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2
+train: images/train
+val: images/val
+nc: 1
+names:
+- bark_beetle

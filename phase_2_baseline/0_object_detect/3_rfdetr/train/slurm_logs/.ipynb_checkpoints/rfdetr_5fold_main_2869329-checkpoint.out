@@ -1,0 +1,55 @@
+Starting rfdetr 5-Fold Training Script
+Job ID: 2869329
+Running on host: c1110a-s17.ufhpc
+Assigned GPUs: 0,1,2,3,4
+Current working directory: /home/gmarais/hulcr-blue/gmarais/PhD/phase_2_baseline/0_object_detection/3_rfdetr/train
+Activating conda environment: EEL
+Conda environment activated.
+Python version: Python 3.11.10
+PyTorch version: 2.5.1+cu124
+CUDA available to PyTorch: True
+Number of GPUs PyTorch sees: 5
+Changed directory to: /blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/3_rfdetr/train
+Running Python script: rfdetr_5fold.py
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 14:25:12 - MainProcess - INFO - Starting RFDETRLarge CV training script with custom evaluation component.
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Starting 5-fold CV for RFDETRLarge with custom evaluation...
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Base results directory set to: ./results_rfdetr_large_detailed_eval
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: COCO Data path template: /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_{}
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Using model: RFDETRLarge
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: RFDETR Training Parameters: {'epochs': 15, 'batch_size': 1, 'grad_accum_steps': 32, 'lr': 0.0001}
+2025-05-20 14:25:12 - MainProcess - WARNING - MainProcess: Using RFDETRLarge. This is a large model. Ensure RFDETR_TRAIN_PARAMS (especially batch_size) are configured for your available GPU memory.
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Ensure HF_TOKEN and ROBOFLOW_API_KEY are set in your environment if RFDETR requires them for any operations.
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: PyTorch detects 5 available CUDA GPU(s).
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: GPU assignments for folds (Fold Index -> Assigned GPU ID or None for CPU):
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess:   Fold 1 (0-indexed: 0) --> GPU 0
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess:   Fold 2 (0-indexed: 1) --> GPU 1
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess:   Fold 3 (0-indexed: 2) --> GPU 2
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess:   Fold 4 (0-indexed: 3) --> GPU 3
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess:   Fold 5 (0-indexed: 4) --> GPU 4
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-1_GPU-0_RFDETRLarge for Fold 1 on device '0'.
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-2_GPU-1_RFDETRLarge for Fold 2 on device '1'.
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-3_GPU-2_RFDETRLarge for Fold 3 on device '2'.
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-4_GPU-3_RFDETRLarge for Fold 4 on device '3'.
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-5_GPU-4_RFDETRLarge for Fold 5 on device '4'.
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Starting 5 training processes...
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Process Fold-1_GPU-0_RFDETRLarge (PID: 559057) has been started.
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Process Fold-2_GPU-1_RFDETRLarge (PID: 559058) has been started.
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Process Fold-3_GPU-2_RFDETRLarge (PID: 559059) has been started.
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Process Fold-4_GPU-3_RFDETRLarge (PID: 559060) has been started.
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: Process Fold-5_GPU-4_RFDETRLarge (PID: 559061) has been started.
+2025-05-20 14:25:12 - MainProcess - INFO - MainProcess: All training processes have been launched. Waiting for them to complete...
+2025-05-20 14:25:18 - Fold-4_GPU-3_RFDETRLarge - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 14:25:19 - Fold-1_GPU-0_RFDETRLarge - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 14:25:19 - Fold-3_GPU-2_RFDETRLarge - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 14:25:19 - Fold-2_GPU-1_RFDETRLarge - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 14:25:19 - Fold-5_GPU-4_RFDETRLarge - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 14:25:21 - MainProcess - INFO - MainProcess: Process Fold-1_GPU-0_RFDETRLarge (PID: 559057) for Fold 1 has completed. Exit code: 0.
+2025-05-20 14:25:21 - MainProcess - INFO - MainProcess: Process Fold-2_GPU-1_RFDETRLarge (PID: 559058) for Fold 2 has completed. Exit code: 0.
+2025-05-20 14:25:21 - MainProcess - INFO - MainProcess: Process Fold-3_GPU-2_RFDETRLarge (PID: 559059) for Fold 3 has completed. Exit code: 0.
+2025-05-20 14:25:21 - MainProcess - INFO - MainProcess: Process Fold-4_GPU-3_RFDETRLarge (PID: 559060) for Fold 4 has completed. Exit code: 0.
+2025-05-20 14:25:21 - MainProcess - INFO - MainProcess: Process Fold-5_GPU-4_RFDETRLarge (PID: 559061) for Fold 5 has completed. Exit code: 0.
+2025-05-20 14:25:21 - MainProcess - INFO - MainProcess: All 5-fold CV tasks for RFDETRLarge have finished processing.
+2025-05-20 14:25:21 - MainProcess - INFO - MainProcess: Check individual fold directories under ./results_rfdetr_large_detailed_eval for native RFDETR outputs and standardized evaluation results.
+Python script finished.
+End of Slurm job.

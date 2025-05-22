@@ -1,0 +1,497 @@
+Starting YOLOv9 5-Fold Training Script
+Job ID: 2843802
+Running on host: c1110a-s17.ufhpc
+Assigned GPUs: 0,1,2,3,4
+Current working directory: /blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection
+Activating conda environment: EEL
+Conda environment activated.
+Python version: Python 3.11.10
+PyTorch version: 2.5.1+cu124
+CUDA available to PyTorch: True
+Number of GPUs PyTorch sees: 5
+Changed directory to: /blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/7_yolov9/train
+Running Python script: yolov9_5fold.py
+2025-05-20 12:05:07 - MainProcess - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:05:07 - MainProcess - INFO - Starting YOLOv9e training script. Make sure 'yolov9e.pt' is a valid model.
+2025-05-20 12:05:07 - MainProcess - INFO - MainProcess: Starting 5-fold cross-validation training orchestrator for yolov9e.pt...
+2025-05-20 12:05:07 - MainProcess - INFO - MainProcess: Base results directory set to: ./results_yolov9e
+2025-05-20 12:05:07 - MainProcess - INFO - MainProcess: Data path template: /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_{}
+2025-05-20 12:05:07 - MainProcess - INFO - MainProcess: Using model: yolov9e.pt
+2025-05-20 12:05:07 - MainProcess - INFO - MainProcess: Global Training Hyperparameters: {'epochs': 3, 'batch': 32, 'workers': 3, 'patience': 0, 'close_mosaic': 50, 'cache': False, 'imgsz': 640, 'optimizer': 'AdamW', 'lr0': 0.0002, 'lrf': 0.01, 'weight_decay': 0.0001, 'dropout': 0.0, 'pretrained': True, 'resume': False, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.1, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.5, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0, 'copy_paste': 0.0, 'project': None, 'name': None, 'exist_ok': False, 'verbose': True, 'save_period': -1, 'seed': 0}
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: PyTorch detects 5 available CUDA GPU(s).
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: GPU assignments for folds (Fold Index -> Assigned GPU ID or None for CPU):
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess:   Fold 1 (0-indexed: 0) --> GPU 0
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess:   Fold 2 (0-indexed: 1) --> GPU 1
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess:   Fold 3 (0-indexed: 2) --> GPU 2
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess:   Fold 4 (0-indexed: 3) --> GPU 3
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess:   Fold 5 (0-indexed: 4) --> GPU 4
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-1_GPU-0 for Fold 1 on GPU 0.
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-2_GPU-1 for Fold 2 on GPU 1.
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-3_GPU-2 for Fold 3 on GPU 2.
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-4_GPU-3 for Fold 4 on GPU 3.
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: Preparing to launch training process Fold-5_GPU-4 for Fold 5 on GPU 4.
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: Starting 5 training processes...
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: Process Fold-1_GPU-0 (PID: 191403) has been started.
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: Process Fold-2_GPU-1 (PID: 191404) has been started.
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: Process Fold-3_GPU-2 (PID: 191405) has been started.
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: Process Fold-4_GPU-3 (PID: 191406) has been started.
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: Process Fold-5_GPU-4 (PID: 191407) has been started.
+2025-05-20 12:05:08 - MainProcess - INFO - MainProcess: All training processes have been launched. Waiting for them to complete...
+WARNING ⚠️ Error decoding JSON from /home/gmarais/.config/Ultralytics/settings.json. Starting with an empty dictionary.
+Creating new Ultralytics Settings v0.0.6 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '/home/gmarais/.config/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+2025-05-20 12:05:11 - Fold-3_GPU-2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:05:11 - Fold-5_GPU-4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:05:11 - Fold-1_GPU-0 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:05:11 - Fold-2_GPU-1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:05:11 - Fold-4_GPU-3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov9e.pt to 'yolov9e.pt'...
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov9e.pt to 'yolov9e.pt'...
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov9e.pt to 'yolov9e.pt'...
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov9e.pt to 'yolov9e.pt'...
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov9e.pt to 'yolov9e.pt'...
+New https://pypi.org/project/ultralytics/8.3.140 available 😃 Update with 'pip install -U ultralytics'
+New https://pypi.org/project/ultralytics/8.3.140 available 😃 Update with 'pip install -U ultralytics'
+New https://pypi.org/project/ultralytics/8.3.140 available 😃 Update with 'pip install -U ultralytics'
+New https://pypi.org/project/ultralytics/8.3.140 available 😃 Update with 'pip install -U ultralytics'
+New https://pypi.org/project/ultralytics/8.3.140 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:0 (NVIDIA A100-SXM4-80GB, 81154MiB)
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:1 (NVIDIA A100-SXM4-80GB, 81154MiB)
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:3 (NVIDIA A100-SXM4-80GB, 81154MiB)
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:4 (NVIDIA A100-SXM4-80GB, 81154MiB)
+Ultralytics 8.3.139 🚀 Python-3.11.10 torch-2.5.1+cu124 CUDA:2 (NVIDIA A100-SXM4-80GB, 81154MiB)
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=50, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/data.yaml, degrees=0.0, deterministic=True, device=2, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=3, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.5, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.0002, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolov9e.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=yolov9e_e3_b32_imgsz640, nbs=64, nms=False, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=./results_yolov9e/fold_3, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=results_yolov9e/fold_3/yolov9e_e3_b32_imgsz640, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0001, workers=3, workspace=None
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=50, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/data.yaml, degrees=0.0, deterministic=True, device=0, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=3, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.5, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.0002, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolov9e.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=yolov9e_e3_b32_imgsz640, nbs=64, nms=False, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=./results_yolov9e/fold_1, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=results_yolov9e/fold_1/yolov9e_e3_b32_imgsz640, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0001, workers=3, workspace=None
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=50, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/data.yaml, degrees=0.0, deterministic=True, device=3, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=3, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.5, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.0002, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolov9e.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=yolov9e_e3_b32_imgsz640, nbs=64, nms=False, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=./results_yolov9e/fold_4, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=results_yolov9e/fold_4/yolov9e_e3_b32_imgsz640, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0001, workers=3, workspace=None
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=50, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/data.yaml, degrees=0.0, deterministic=True, device=1, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=3, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.5, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.0002, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolov9e.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=yolov9e_e3_b32_imgsz640, nbs=64, nms=False, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=./results_yolov9e/fold_2, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=results_yolov9e/fold_2/yolov9e_e3_b32_imgsz640, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0001, workers=3, workspace=None
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=50, cls=0.5, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/data.yaml, degrees=0.0, deterministic=True, device=4, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=3, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.5, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.0002, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolov9e.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=yolov9e_e3_b32_imgsz640, nbs=64, nms=False, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=./results_yolov9e/fold_5, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=results_yolov9e/fold_5/yolov9e_e3_b32_imgsz640, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0001, workers=3, workspace=None
+2025-05-20 12:05:14 - Fold-5_GPU-4 - INFO - generated new fontManager
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1         0  torch.nn.modules.linear.Identity             []                            
+2025-05-20 12:05:14 - Fold-1_GPU-0 - INFO - generated new fontManager
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1         0  torch.nn.modules.linear.Identity             []                            
+2025-05-20 12:05:14 - Fold-3_GPU-2 - INFO - generated new fontManager
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1         0  torch.nn.modules.linear.Identity             []                            
+2025-05-20 12:05:15 - Fold-4_GPU-3 - INFO - generated new fontManager
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1         0  torch.nn.modules.linear.Identity             []                            
+2025-05-20 12:05:15 - Fold-2_GPU-1 - INFO - generated new fontManager
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1         0  torch.nn.modules.linear.Identity             []                            
+  1                  -1  1      1856  ultralytics.nn.modules.conv.Conv             [3, 64, 3, 2]                 
+  1                  -1  1      1856  ultralytics.nn.modules.conv.Conv             [3, 64, 3, 2]                 
+  1                  -1  1      1856  ultralytics.nn.modules.conv.Conv             [3, 64, 3, 2]                 
+  1                  -1  1      1856  ultralytics.nn.modules.conv.Conv             [3, 64, 3, 2]                 
+  1                  -1  1      1856  ultralytics.nn.modules.conv.Conv             [3, 64, 3, 2]                 
+  2                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  2                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  2                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  2                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  2                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  3                  -1  1    252160  ultralytics.nn.modules.block.RepNCSPELAN4    [128, 256, 128, 64, 2]        
+  3                  -1  1    252160  ultralytics.nn.modules.block.RepNCSPELAN4    [128, 256, 128, 64, 2]        
+  3                  -1  1    252160  ultralytics.nn.modules.block.RepNCSPELAN4    [128, 256, 128, 64, 2]        
+  3                  -1  1    252160  ultralytics.nn.modules.block.RepNCSPELAN4    [128, 256, 128, 64, 2]        
+  4                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+  4                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+  4                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+  4                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+  3                  -1  1    252160  ultralytics.nn.modules.block.RepNCSPELAN4    [128, 256, 128, 64, 2]        
+  4                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+  5                  -1  1   1004032  ultralytics.nn.modules.block.RepNCSPELAN4    [256, 512, 256, 128, 2]       
+  5                  -1  1   1004032  ultralytics.nn.modules.block.RepNCSPELAN4    [256, 512, 256, 128, 2]       
+  6                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+  6                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+  5                  -1  1   1004032  ultralytics.nn.modules.block.RepNCSPELAN4    [256, 512, 256, 128, 2]       
+  5                  -1  1   1004032  ultralytics.nn.modules.block.RepNCSPELAN4    [256, 512, 256, 128, 2]       
+  5                  -1  1   1004032  ultralytics.nn.modules.block.RepNCSPELAN4    [256, 512, 256, 128, 2]       
+  6                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+  6                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+  6                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+  7                  -1  1   4006912  ultralytics.nn.modules.block.RepNCSPELAN4    [512, 1024, 512, 256, 2]      
+  7                  -1  1   4006912  ultralytics.nn.modules.block.RepNCSPELAN4    [512, 1024, 512, 256, 2]      
+  7                  -1  1   4006912  ultralytics.nn.modules.block.RepNCSPELAN4    [512, 1024, 512, 256, 2]      
+  7                  -1  1   4006912  ultralytics.nn.modules.block.RepNCSPELAN4    [512, 1024, 512, 256, 2]      
+  7                  -1  1   4006912  ultralytics.nn.modules.block.RepNCSPELAN4    [512, 1024, 512, 256, 2]      
+  8                  -1  1   2623488  ultralytics.nn.modules.block.ADown           [1024, 1024]                  
+  8                  -1  1   2623488  ultralytics.nn.modules.block.ADown           [1024, 1024]                  
+  8                  -1  1   2623488  ultralytics.nn.modules.block.ADown           [1024, 1024]                  
+  8                  -1  1   2623488  ultralytics.nn.modules.block.ADown           [1024, 1024]                  
+  8                  -1  1   2623488  ultralytics.nn.modules.block.ADown           [1024, 1024]                  
+  9                  -1  1   4269056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 1024, 512, 256, 2]     
+  9                  -1  1   4269056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 1024, 512, 256, 2]     
+ 10                   1  1      4160  ultralytics.nn.modules.block.CBLinear        [64, [64]]                    
+ 10                   1  1      4160  ultralytics.nn.modules.block.CBLinear        [64, [64]]                    
+ 11                   3  1     49344  ultralytics.nn.modules.block.CBLinear        [256, [64, 128]]              
+ 11                   3  1     49344  ultralytics.nn.modules.block.CBLinear        [256, [64, 128]]              
+ 12                   5  1    229824  ultralytics.nn.modules.block.CBLinear        [512, [64, 128, 256]]         
+ 12                   5  1    229824  ultralytics.nn.modules.block.CBLinear        [512, [64, 128, 256]]         
+  9                  -1  1   4269056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 1024, 512, 256, 2]     
+ 10                   1  1      4160  ultralytics.nn.modules.block.CBLinear        [64, [64]]                    
+ 11                   3  1     49344  ultralytics.nn.modules.block.CBLinear        [256, [64, 128]]              
+ 12                   5  1    229824  ultralytics.nn.modules.block.CBLinear        [512, [64, 128, 256]]         
+  9                  -1  1   4269056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 1024, 512, 256, 2]     
+ 10                   1  1      4160  ultralytics.nn.modules.block.CBLinear        [64, [64]]                    
+  9                  -1  1   4269056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 1024, 512, 256, 2]     
+ 10                   1  1      4160  ultralytics.nn.modules.block.CBLinear        [64, [64]]                    
+ 11                   3  1     49344  ultralytics.nn.modules.block.CBLinear        [256, [64, 128]]              
+ 13                   7  1    984000  ultralytics.nn.modules.block.CBLinear        [1024, [64, 128, 256, 512]]   
+ 11                   3  1     49344  ultralytics.nn.modules.block.CBLinear        [256, [64, 128]]              
+ 13                   7  1    984000  ultralytics.nn.modules.block.CBLinear        [1024, [64, 128, 256, 512]]   
+ 12                   5  1    229824  ultralytics.nn.modules.block.CBLinear        [512, [64, 128, 256]]         
+ 12                   5  1    229824  ultralytics.nn.modules.block.CBLinear        [512, [64, 128, 256]]         
+ 13                   7  1    984000  ultralytics.nn.modules.block.CBLinear        [1024, [64, 128, 256, 512]]   
+ 13                   7  1    984000  ultralytics.nn.modules.block.CBLinear        [1024, [64, 128, 256, 512]]   
+ 13                   7  1    984000  ultralytics.nn.modules.block.CBLinear        [1024, [64, 128, 256, 512]]   
+ 14                   9  1   2033600  ultralytics.nn.modules.block.CBLinear        [1024, [64, 128, 256, 512, 1024]]
+ 14                   9  1   2033600  ultralytics.nn.modules.block.CBLinear        [1024, [64, 128, 256, 512, 1024]]
+ 15                   0  1      1856  ultralytics.nn.modules.conv.Conv             [3, 64, 3, 2]                 
+ 15                   0  1      1856  ultralytics.nn.modules.conv.Conv             [3, 64, 3, 2]                 
+ 16[10, 11, 12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[0, 0, 0, 0, 0]]             
+ 16[10, 11, 12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[0, 0, 0, 0, 0]]             
+ 17                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+ 17                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+ 18[11, 12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[1, 1, 1, 1]]                
+ 18[11, 12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[1, 1, 1, 1]]                
+ 14                   9  1   2033600  ultralytics.nn.modules.block.CBLinear        [1024, [64, 128, 256, 512, 1024]]
+ 15                   0  1      1856  ultralytics.nn.modules.conv.Conv             [3, 64, 3, 2]                 
+ 16[10, 11, 12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[0, 0, 0, 0, 0]]             
+ 17                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+ 18[11, 12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[1, 1, 1, 1]]                
+ 14                   9  1   2033600  ultralytics.nn.modules.block.CBLinear        [1024, [64, 128, 256, 512, 1024]]
+ 15                   0  1      1856  ultralytics.nn.modules.conv.Conv             [3, 64, 3, 2]                 
+ 16[10, 11, 12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[0, 0, 0, 0, 0]]             
+ 14                   9  1   2033600  ultralytics.nn.modules.block.CBLinear        [1024, [64, 128, 256, 512, 1024]]
+ 15                   0  1      1856  ultralytics.nn.modules.conv.Conv             [3, 64, 3, 2]                 
+ 16[10, 11, 12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[0, 0, 0, 0, 0]]             
+ 17                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+ 18[11, 12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[1, 1, 1, 1]]                
+ 17                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+ 18[11, 12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[1, 1, 1, 1]]                
+ 19                  -1  1    252160  ultralytics.nn.modules.block.RepNCSPELAN4    [128, 256, 128, 64, 2]        
+ 19                  -1  1    252160  ultralytics.nn.modules.block.RepNCSPELAN4    [128, 256, 128, 64, 2]        
+ 20                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+ 21    [12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[2, 2, 2]]                   
+ 20                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+ 21    [12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[2, 2, 2]]                   
+ 19                  -1  1    252160  ultralytics.nn.modules.block.RepNCSPELAN4    [128, 256, 128, 64, 2]        
+ 20                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+ 21    [12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[2, 2, 2]]                   
+ 19                  -1  1    252160  ultralytics.nn.modules.block.RepNCSPELAN4    [128, 256, 128, 64, 2]        
+ 19                  -1  1    252160  ultralytics.nn.modules.block.RepNCSPELAN4    [128, 256, 128, 64, 2]        
+ 20                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+ 21    [12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[2, 2, 2]]                   
+ 20                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+ 21    [12, 13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[2, 2, 2]]                   
+ 22                  -1  1   1004032  ultralytics.nn.modules.block.RepNCSPELAN4    [256, 512, 256, 128, 2]       
+ 22                  -1  1   1004032  ultralytics.nn.modules.block.RepNCSPELAN4    [256, 512, 256, 128, 2]       
+ 22                  -1  1   1004032  ultralytics.nn.modules.block.RepNCSPELAN4    [256, 512, 256, 128, 2]       
+ 23                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+ 24        [13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[3, 3]]                      
+ 23                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+ 24        [13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[3, 3]]                      
+ 23                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+ 24        [13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[3, 3]]                      
+ 22                  -1  1   1004032  ultralytics.nn.modules.block.RepNCSPELAN4    [256, 512, 256, 128, 2]       
+ 22                  -1  1   1004032  ultralytics.nn.modules.block.RepNCSPELAN4    [256, 512, 256, 128, 2]       
+ 23                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+ 23                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+ 24        [13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[3, 3]]                      
+ 24        [13, 14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[3, 3]]                      
+ 25                  -1  1   4006912  ultralytics.nn.modules.block.RepNCSPELAN4    [512, 1024, 512, 256, 2]      
+ 25                  -1  1   4006912  ultralytics.nn.modules.block.RepNCSPELAN4    [512, 1024, 512, 256, 2]      
+ 25                  -1  1   4006912  ultralytics.nn.modules.block.RepNCSPELAN4    [512, 1024, 512, 256, 2]      
+ 25                  -1  1   4006912  ultralytics.nn.modules.block.RepNCSPELAN4    [512, 1024, 512, 256, 2]      
+ 25                  -1  1   4006912  ultralytics.nn.modules.block.RepNCSPELAN4    [512, 1024, 512, 256, 2]      
+ 26                  -1  1   2623488  ultralytics.nn.modules.block.ADown           [1024, 1024]                  
+ 26                  -1  1   2623488  ultralytics.nn.modules.block.ADown           [1024, 1024]                  
+ 27            [14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[4]]                         
+ 27            [14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[4]]                         
+ 26                  -1  1   2623488  ultralytics.nn.modules.block.ADown           [1024, 1024]                  
+ 27            [14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[4]]                         
+ 26                  -1  1   2623488  ultralytics.nn.modules.block.ADown           [1024, 1024]                  
+ 26                  -1  1   2623488  ultralytics.nn.modules.block.ADown           [1024, 1024]                  
+ 27            [14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[4]]                         
+ 27            [14, -1]  1         0  ultralytics.nn.modules.block.CBFuse          [[4]]                         
+ 28                  -1  1   4269056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 1024, 512, 256, 2]     
+ 28                  -1  1   4269056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 1024, 512, 256, 2]     
+ 28                  -1  1   4269056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 1024, 512, 256, 2]     
+ 29                  -1  1    787968  ultralytics.nn.modules.block.SPPELAN         [1024, 512, 256]              
+ 29                  -1  1    787968  ultralytics.nn.modules.block.SPPELAN         [1024, 512, 256]              
+ 30                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 30                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 31            [-1, 25]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 31            [-1, 25]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 29                  -1  1    787968  ultralytics.nn.modules.block.SPPELAN         [1024, 512, 256]              
+ 30                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 31            [-1, 25]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 28                  -1  1   4269056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 1024, 512, 256, 2]     
+ 28                  -1  1   4269056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 1024, 512, 256, 2]     
+ 29                  -1  1    787968  ultralytics.nn.modules.block.SPPELAN         [1024, 512, 256]              
+ 30                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 31            [-1, 25]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 29                  -1  1    787968  ultralytics.nn.modules.block.SPPELAN         [1024, 512, 256]              
+ 30                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 31            [-1, 25]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 32                  -1  1   4005888  ultralytics.nn.modules.block.RepNCSPELAN4    [1536, 512, 512, 256, 2]      
+ 33                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 34            [-1, 22]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 32                  -1  1   4005888  ultralytics.nn.modules.block.RepNCSPELAN4    [1536, 512, 512, 256, 2]      
+ 32                  -1  1   4005888  ultralytics.nn.modules.block.RepNCSPELAN4    [1536, 512, 512, 256, 2]      
+ 33                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 33                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 34            [-1, 22]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 34            [-1, 22]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 32                  -1  1   4005888  ultralytics.nn.modules.block.RepNCSPELAN4    [1536, 512, 512, 256, 2]      
+ 33                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 34            [-1, 22]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 32                  -1  1   4005888  ultralytics.nn.modules.block.RepNCSPELAN4    [1536, 512, 512, 256, 2]      
+ 33                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 34            [-1, 22]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 35                  -1  1   1069056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 256, 256, 128, 2]      
+ 35                  -1  1   1069056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 256, 256, 128, 2]      
+ 35                  -1  1   1069056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 256, 256, 128, 2]      
+ 36                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+ 37            [-1, 32]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 36                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+ 36                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+ 37            [-1, 32]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 37            [-1, 32]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 35                  -1  1   1069056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 256, 256, 128, 2]      
+ 35                  -1  1   1069056  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 256, 256, 128, 2]      
+ 36                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+ 37            [-1, 32]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 36                  -1  1    164352  ultralytics.nn.modules.block.ADown           [256, 256]                    
+ 37            [-1, 32]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 38                  -1  1   3612672  ultralytics.nn.modules.block.RepNCSPELAN4    [768, 512, 512, 256, 2]       
+ 38                  -1  1   3612672  ultralytics.nn.modules.block.RepNCSPELAN4    [768, 512, 512, 256, 2]       
+ 38                  -1  1   3612672  ultralytics.nn.modules.block.RepNCSPELAN4    [768, 512, 512, 256, 2]       
+ 39                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+ 40            [-1, 29]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 39                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+ 39                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+ 40            [-1, 29]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 40            [-1, 29]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 38                  -1  1   3612672  ultralytics.nn.modules.block.RepNCSPELAN4    [768, 512, 512, 256, 2]       
+ 38                  -1  1   3612672  ultralytics.nn.modules.block.RepNCSPELAN4    [768, 512, 512, 256, 2]       
+ 39                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+ 40            [-1, 29]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 39                  -1  1    656384  ultralytics.nn.modules.block.ADown           [512, 512]                    
+ 40            [-1, 29]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 41                  -1  1  12860416  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 512, 1024, 512, 2]     
+ 41                  -1  1  12860416  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 512, 1024, 512, 2]     
+ 41                  -1  1  12860416  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 512, 1024, 512, 2]     
+ 41                  -1  1  12860416  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 512, 1024, 512, 2]     
+ 41                  -1  1  12860416  ultralytics.nn.modules.block.RepNCSPELAN4    [1024, 512, 1024, 512, 2]     
+ 42        [35, 38, 41]  1   5583571  ultralytics.nn.modules.head.Detect           [1, [256, 512, 512]]          
+ 42        [35, 38, 41]  1   5583571  ultralytics.nn.modules.head.Detect           [1, [256, 512, 512]]          
+ 42        [35, 38, 41]  1   5583571  ultralytics.nn.modules.head.Detect           [1, [256, 512, 512]]          
+ 42        [35, 38, 41]  1   5583571  ultralytics.nn.modules.head.Detect           [1, [256, 512, 512]]          
+ 42        [35, 38, 41]  1   5583571  ultralytics.nn.modules.head.Detect           [1, [256, 512, 512]]          
+YOLOv9e summary: 721 layers, 58,145,683 parameters, 58,145,667 gradients, 192.7 GFLOPs
+YOLOv9e summary: 721 layers, 58,145,683 parameters, 58,145,667 gradients, 192.7 GFLOPs
+
+
+YOLOv9e summary: 721 layers, 58,145,683 parameters, 58,145,667 gradients, 192.7 GFLOPs
+YOLOv9e summary: 721 layers, 58,145,683 parameters, 58,145,667 gradients, 192.7 GFLOPs
+
+
+YOLOv9e summary: 721 layers, 58,145,683 parameters, 58,145,667 gradients, 192.7 GFLOPs
+
+Transferred 1805/1811 items from pretrained weights
+Transferred 1805/1811 items from pretrained weights
+Transferred 1805/1811 items from pretrained weights
+Transferred 1805/1811 items from pretrained weights
+Transferred 1805/1811 items from pretrained weights
+Freezing layer 'model.42.dfl.conv.weight'
+Freezing layer 'model.42.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt to 'yolo11n.pt'...
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt to 'yolo11n.pt'...
+Freezing layer 'model.42.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt to 'yolo11n.pt'...
+Freezing layer 'model.42.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt to 'yolo11n.pt'...
+Freezing layer 'model.42.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt to 'yolo11n.pt'...
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.8±0.5 ms, read: 155.5±164.9 MB/s, size: 364.4 KB)
+WARNING ⚠️ [34m[1mtrain: [0mSlow image access detected (ping: 16.9±24.6 ms, read: 110.8±66.2 MB/s, size: 3717.6 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips/
+WARNING ⚠️ [34m[1mtrain: [0mSlow image access detected (ping: 20.2±28.1 ms, read: 84.7±73.2 MB/s, size: 3372.4 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips/
+WARNING ⚠️ [34m[1mtrain: [0mSlow image access detected (ping: 13.8±16.7 ms, read: 182.4±104.9 MB/s, size: 7049.6 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips/
+WARNING ⚠️ [34m[1mtrain: [0mSlow image access detected (ping: 20.7±18.3 ms, read: 196.7±156.4 MB/s, size: 4122.8 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips/
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/0216be816e3ac9f15436610a5ccdb513.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/33e0a711d4ef0fe2dec0f438502fc07a.png: 1 duplicate labels removed
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/3f5405046e601f90f613687d81b99c02.png: ignoring corrupt image/label: Image size (200873929 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/878cd5d10f030a887f20a5e2fb782f45.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/8daa92e6ef24f0b24aa50ce1ed73e0fd.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/efbe79374ab7e9d164da85582cac410e.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/train/f1ca84f00f77582c7b01fa17c605942e.png: ignoring corrupt image/label: Truncated File Read
+2025-05-20 12:09:25 - Process-1:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:09:28 - Process-1:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:09:31 - Process-1:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+WARNING ⚠️ [34m[1mval: [0mSlow image access detected (ping: 11.5±15.2 ms, read: 85.6±70.7 MB/s, size: 949.3 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips/
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/019b8357606179cf210c6c570d55be08.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/139e1cc74c2bec9084204ecdf79c4cf5.png: ignoring corrupt image/label: Image size (261150375 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/33e0a711d4ef0fe2dec0f438502fc07a.png: 1 duplicate labels removed
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/3f5405046e601f90f613687d81b99c02.png: ignoring corrupt image/label: Image size (200873929 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/7635c238b564f40029a46ada18c36464.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/76e59b26d2184160993fc4b535876897.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/77739e5d9f7b612a075a842b7f83321f.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/878cd5d10f030a887f20a5e2fb782f45.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/8daa92e6ef24f0b24aa50ce1ed73e0fd.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/b559392f603d6fea3d046ef48e322b77.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/train/efbe79374ab7e9d164da85582cac410e.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/019b8357606179cf210c6c570d55be08.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/0216be816e3ac9f15436610a5ccdb513.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/33e0a711d4ef0fe2dec0f438502fc07a.png: 1 duplicate labels removed
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/3f5405046e601f90f613687d81b99c02.png: ignoring corrupt image/label: Image size (200873929 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/7635c238b564f40029a46ada18c36464.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/76e59b26d2184160993fc4b535876897.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/77739e5d9f7b612a075a842b7f83321f.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/b559392f603d6fea3d046ef48e322b77.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/efbe79374ab7e9d164da85582cac410e.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/train/f1ca84f00f77582c7b01fa17c605942e.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/019b8357606179cf210c6c570d55be08.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/0216be816e3ac9f15436610a5ccdb513.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/139e1cc74c2bec9084204ecdf79c4cf5.png: ignoring corrupt image/label: Image size (261150375 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/33e0a711d4ef0fe2dec0f438502fc07a.png: 1 duplicate labels removed
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/7635c238b564f40029a46ada18c36464.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/76e59b26d2184160993fc4b535876897.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/77739e5d9f7b612a075a842b7f83321f.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/878cd5d10f030a887f20a5e2fb782f45.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/8daa92e6ef24f0b24aa50ce1ed73e0fd.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/b559392f603d6fea3d046ef48e322b77.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/efbe79374ab7e9d164da85582cac410e.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/train/f1ca84f00f77582c7b01fa17c605942e.png: ignoring corrupt image/label: Truncated File Read
+2025-05-20 12:10:12 - Process-4:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:10:13 - Process-2:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:10:13 - Process-5:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:10:16 - Process-4:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:10:16 - Process-2:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:10:16 - Process-5:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:10:19 - Process-4:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:10:19 - Process-2:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+[34m[1mval: [0mFast image access ✅ (ping: 6.6±13.7 ms, read: 186.7±124.2 MB/s, size: 1368.6 KB)
+2025-05-20 12:10:19 - Process-5:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+[34m[1mval: [0mFast image access ✅ (ping: 6.1±12.0 ms, read: 231.8±109.0 MB/s, size: 2242.1 KB)
+[34m[1mval: [0mFast image access ✅ (ping: 0.7±1.0 ms, read: 81.8±85.9 MB/s, size: 124.6 KB)
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/019b8357606179cf210c6c570d55be08.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/0216be816e3ac9f15436610a5ccdb513.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/139e1cc74c2bec9084204ecdf79c4cf5.png: ignoring corrupt image/label: Image size (261150375 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/3f5405046e601f90f613687d81b99c02.png: ignoring corrupt image/label: Image size (200873929 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/7635c238b564f40029a46ada18c36464.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/76e59b26d2184160993fc4b535876897.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/77739e5d9f7b612a075a842b7f83321f.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/878cd5d10f030a887f20a5e2fb782f45.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/8daa92e6ef24f0b24aa50ce1ed73e0fd.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/b559392f603d6fea3d046ef48e322b77.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mtrain: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/train/f1ca84f00f77582c7b01fa17c605942e.png: ignoring corrupt image/label: Truncated File Read
+2025-05-20 12:10:26 - Process-3:1 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:10:29 - Process-3:2 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/val/019b8357606179cf210c6c570d55be08.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/val/7635c238b564f40029a46ada18c36464.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/val/76e59b26d2184160993fc4b535876897.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/val/77739e5d9f7b612a075a842b7f83321f.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_1/images/val/b559392f603d6fea3d046ef48e322b77.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+2025-05-20 12:10:32 - Process-1:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:10:33 - Process-3:3 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+[34m[1mval: [0mFast image access ✅ (ping: 4.0±4.6 ms, read: 121.6±97.3 MB/s, size: 1806.5 KB)
+2025-05-20 12:10:35 - Process-1:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:10:37 - Process-1:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:10:39 - Process-1:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:10:42 - Process-1:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:10:44 - Process-1:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+Plotting labels to results_yolov9e/fold_1/yolov9e_e3_b32_imgsz640/labels.jpg... 
+[34m[1moptimizer:[0m AdamW(lr=0.0002, momentum=0.937) with parameter groups 298 weight(decay=0.0), 310 weight(decay=0.0001), 309 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 3 dataloader workers
+Logging results to [1mresults_yolov9e/fold_1/yolov9e_e3_b32_imgsz640[0m
+Starting training for 3 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/val/0216be816e3ac9f15436610a5ccdb513.png: ignoring corrupt image/label: Truncated File Read
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_4/images/val/f1ca84f00f77582c7b01fa17c605942e.png: ignoring corrupt image/label: Truncated File Read
+2025-05-20 12:11:18 - Process-4:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_5/images/val/3f5405046e601f90f613687d81b99c02.png: ignoring corrupt image/label: Image size (200873929 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+2025-05-20 12:11:20 - Process-4:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/val/139e1cc74c2bec9084204ecdf79c4cf5.png: ignoring corrupt image/label: Image size (261150375 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/val/878cd5d10f030a887f20a5e2fb782f45.png: ignoring corrupt image/label: Image size (228831264 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_2/images/val/8daa92e6ef24f0b24aa50ce1ed73e0fd.png: ignoring corrupt image/label: Truncated File Read
+2025-05-20 12:11:21 - Process-5:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:22 - Process-4:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:23 - Process-2:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:23 - Process-5:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:24 - Process-4:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:25 - Process-2:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:25 - Process-5:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:27 - Process-4:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:27 - Process-2:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:28 - Process-5:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:29 - Process-4:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:30 - Process-2:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:30 - Process-5:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+Plotting labels to results_yolov9e/fold_4/yolov9e_e3_b32_imgsz640/labels.jpg... 
+2025-05-20 12:11:32 - Process-2:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:32 - Process-5:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+Plotting labels to results_yolov9e/fold_5/yolov9e_e3_b32_imgsz640/labels.jpg... 
+[34m[1moptimizer:[0m AdamW(lr=0.0002, momentum=0.937) with parameter groups 298 weight(decay=0.0), 310 weight(decay=0.0001), 309 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 3 dataloader workers
+Logging results to [1mresults_yolov9e/fold_4/yolov9e_e3_b32_imgsz640[0m
+Starting training for 3 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+2025-05-20 12:11:35 - Process-2:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+Plotting labels to results_yolov9e/fold_2/yolov9e_e3_b32_imgsz640/labels.jpg... 
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/val/33e0a711d4ef0fe2dec0f438502fc07a.png: 1 duplicate labels removed
+[34m[1mval: [0m/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/images/val/efbe79374ab7e9d164da85582cac410e.png: ignoring corrupt image/label: Truncated File Read
+[34m[1moptimizer:[0m AdamW(lr=0.0002, momentum=0.937) with parameter groups 298 weight(decay=0.0), 310 weight(decay=0.0001), 309 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 3 dataloader workers
+Logging results to [1mresults_yolov9e/fold_5/yolov9e_e3_b32_imgsz640[0m
+Starting training for 3 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+2025-05-20 12:11:39 - Process-3:4 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+[34m[1moptimizer:[0m AdamW(lr=0.0002, momentum=0.937) with parameter groups 298 weight(decay=0.0), 310 weight(decay=0.0001), 309 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 3 dataloader workers
+Logging results to [1mresults_yolov9e/fold_2/yolov9e_e3_b32_imgsz640[0m
+Starting training for 3 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+2025-05-20 12:11:42 - Process-3:5 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:44 - Process-3:6 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:47 - Process-3:7 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:49 - Process-3:8 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+2025-05-20 12:11:51 - Process-3:9 - INFO - MainProcess: Multiprocessing start method configured to 'spawn'. Current method: spawn
+Plotting labels to results_yolov9e/fold_3/yolov9e_e3_b32_imgsz640/labels.jpg... 
+[34m[1moptimizer:[0m AdamW(lr=0.0002, momentum=0.937) with parameter groups 298 weight(decay=0.0), 310 weight(decay=0.0001), 309 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 3 dataloader workers
+Logging results to [1mresults_yolov9e/fold_3/yolov9e_e3_b32_imgsz640[0m
+Starting training for 3 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size

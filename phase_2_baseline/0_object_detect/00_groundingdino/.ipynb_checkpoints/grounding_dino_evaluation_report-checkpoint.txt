@@ -1,0 +1,15 @@
+2025-05-19 15:06:45 - INFO - Starting GroundingDINO evaluation script.
+2025-05-19 15:06:45 - INFO - Report will be saved to: /blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/00_groundingdino/grounding_dino_evaluation_report.txt
+2025-05-19 15:06:45 - INFO - --- Current Configuration ---
+2025-05-19 15:06:45 - INFO - Dataset Folder: /blue/hulcr/gmarais/PhD/phase_1_data/0_20250515/data/
+2025-05-19 15:06:45 - INFO - Model ID: IDEA-Research/grounding-dino-base
+2025-05-19 15:06:45 - INFO - Text Prompt: 'insect.'
+2025-05-19 15:06:45 - INFO - Box Threshold (DINO): 0.4
+2025-05-19 15:06:45 - INFO - Text Threshold (DINO): 0.3
+2025-05-19 15:06:45 - INFO - IoU Threshold (Evaluation): 0.5
+2025-05-19 15:06:45 - INFO - -----------------------------
+2025-05-19 15:06:45 - INFO - Using device: cuda
+2025-05-19 15:06:45 - INFO - Loading GroundingDINO model: IDEA-Research/grounding-dino-base...
+2025-05-19 15:07:01 - INFO - Model loaded successfully.
+2025-05-19 15:07:01 - INFO - Starting to process images in: /blue/hulcr/gmarais/PhD/phase_1_data/0_20250515/data/
+2025-05-19 15:07:01 - INFO - Processing image (1/54421): d1d1f8f7088b0b4f3dfc7644caa5a0c7.png

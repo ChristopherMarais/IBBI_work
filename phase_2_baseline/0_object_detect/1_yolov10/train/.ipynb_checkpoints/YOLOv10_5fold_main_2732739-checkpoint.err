@@ -1,0 +1,28 @@
+/apps/lua/5.4.6/bin/lua: error loading module 'posix.unistd' from file '/apps/lua/5.4.6/lib/lua/5.4/posix/unistd.so':
+	libcrypt.so.1: cannot open shared object file: No such file or directory
+stack traceback:
+	[C]: in ?
+	[C]: in function 'require'
+	/apps/lua/5.4.6/share/lua/5.4/posix/init.lua:26: in main chunk
+	[C]: in function 'require'
+	/apps/lmod/8.7.58/libexec/addto:65: in main chunk
+	[C]: in ?
+/apps/lua/5.4.6/bin/lua: error loading module 'posix.unistd' from file '/apps/lua/5.4.6/lib/lua/5.4/posix/unistd.so':
+	libcrypt.so.1: cannot open shared object file: No such file or directory
+stack traceback:
+	[C]: in ?
+	[C]: in function 'require'
+	/apps/lua/5.4.6/share/lua/5.4/posix/init.lua:26: in main chunk
+	[C]: in function 'require'
+	/apps/lmod/8.7.58/libexec/lmod:61: in main chunk
+	[C]: in ?
+/apps/lua/5.4.6/bin/lua: error loading module 'posix.unistd' from file '/apps/lua/5.4.6/lib/lua/5.4/posix/unistd.so':
+	libcrypt.so.1: cannot open shared object file: No such file or directory
+stack traceback:
+	[C]: in ?
+	[C]: in function 'require'
+	/apps/lua/5.4.6/share/lua/5.4/posix/init.lua:26: in main chunk
+	[C]: in function 'require'
+	/apps/lmod/8.7.58/libexec/lmod:61: in main chunk
+	[C]: in ?
+/var/spool/slurmd/job2732739/slurm_script: line 36: conda: command not found

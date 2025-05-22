@@ -1,0 +1,5 @@
+path: /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/test
+test: images/test
+nc: 1
+names:
+- bark_beetle

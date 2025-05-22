@@ -1,0 +1,7 @@
+Starting YOLOv10 5-Fold Training Script
+Job ID: 2732739
+Running on host: c1106a-s11.ufhpc
+Assigned GPUs: 0,1,2,3,4
+Current working directory: /blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/1_yolov10/train
+Activating conda environment: EEL
+Failed to activate conda environment: EEL

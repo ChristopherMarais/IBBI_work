@@ -10,7 +10,7 @@ Image.MAX_IMAGE_PIXELS = None  # Allow loading of very large images
 
 # --- General Configuration ---
 NUM_FOLDS = 5
-BASE_DATA_PATH_TEMPLATE = "/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_{}"
+BASE_DATA_PATH_TEMPLATE = "/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_{}"
 BASE_RESULTS_DIR = "./results_rtdetr-x"  # Main directory for all cross-validation results
 MODEL_NAME_OR_PATH = "rtdetr-x.pt"  # RTDETR-x weights
 
@@ -207,7 +207,7 @@ def run_cross_validation_training():
     logging.info(f"MainProcess: Base results directory set to: {BASE_RESULTS_DIR}")
     logging.info(f"MainProcess: Data path template: {BASE_DATA_PATH_TEMPLATE}")
     logging.info(f"MainProcess: Using model: {MODEL_NAME_OR_PATH}")
-        logging.info(f"MainProcess: Global Training Hyperparameters (see TRAIN_HYPERPARAMS in script for full list): epochs={TRAIN_HYPERPARAMS['epochs']}, batch={TRAIN_HYPERPARAMS['batch']}, imgsz={TRAIN_HYPERPARAMS['imgsz']}")
+    logging.info(f"MainProcess: Global Training Hyperparameters (see TRAIN_HYPERPARAMS in script for full list): epochs={TRAIN_HYPERPARAMS['epochs']}, batch={TRAIN_HYPERPARAMS['batch']}, imgsz={TRAIN_HYPERPARAMS['imgsz']}")
 
     # logging.info(f"MainProcess: Global Training Hyperparameters (see TRAIN_HYPERPARAMS in script for full list): epochs={TRAIN_HYPERPARAMS['epochs']}, batch={TRAIN_HYPERPARAMS['batch']}, imgsz={TRAIN_HYPERPARAMS['imgsz']}, end2end={TRAIN_HYPERPARAMS['end2end']}")
     # if not TRAIN_HYPERPARAMS['end2end']:

@@ -19,7 +19,7 @@ import pandas as pd
 
 # --- General Configuration ---
 NUM_FOLDS = 5
-BASE_DATA_PATH_TEMPLATE = "/blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_{}"
+BASE_DATA_PATH_TEMPLATE = "/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_{}"
 BASE_RESULTS_DIR = "./results_rfdetr_large_detailed_eval"
 MODEL_DESCRIPTOR = "RFDETRLarge"
 

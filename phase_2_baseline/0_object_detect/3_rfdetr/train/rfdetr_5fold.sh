@@ -46,7 +46,7 @@ echo "Number of GPUs PyTorch sees: $(python -c 'import torch; print(torch.cuda.d
 
 # Change to the directory where your python script and results folder should be
 # IMPORTANT: Update this path if your rfdetr_train_5_folds.py is elsewhere
-SCRIPT_DIR="/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/3_rfdetr/train" # Assuming script is here
+SCRIPT_DIR="/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/3_rfdetr/train" # Assuming script is here
 cd ${SCRIPT_DIR}
 echo "Changed directory to: $(pwd)"
 

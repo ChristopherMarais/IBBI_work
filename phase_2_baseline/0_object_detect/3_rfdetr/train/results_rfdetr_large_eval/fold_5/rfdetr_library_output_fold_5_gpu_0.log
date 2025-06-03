@@ -1,0 +1,113 @@
+--- This is the start of redirected stdout/stderr for Fold 5 ---
+Script: Set CUDA_VISIBLE_DEVICES='0'
+Script: Set DDP-like env vars: MASTER_ADDR=localhost, PORT=29504, RANK=0, WORLD_SIZE=1, LOCAL_RANK=0
+Script: PyTorch active device context: cuda:0 (Physical GPU 0)
+Loading pretrain weights
+Script: Starting RFDETR native training with parameters for .train(): {'epochs': 3, 'batch_size': 1, 'grad_accum_steps': 32, 'lr': 0.0001, 'dataset_dir': '/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_5', 'output_dir': './results_rfdetr_large_eval/fold_5/rfdetr_training_output', 'device': 'cuda:0'}
+TensorBoard logging initialized. To monitor logs, use 'tensorboard --logdir ./results_rfdetr_large_eval/fold_5/rfdetr_training_output' and open http://localhost:6006/ in browser.
+| distributed init (rank 0): env://
+git:
+  sha: N/A, status: clean, branch: N/A
+
+Namespace(num_classes=1, grad_accum_steps=32, amp=True, lr=0.0001, lr_encoder=0.00015, batch_size=1, weight_decay=0.0001, epochs=3, lr_drop=100, clip_max_norm=0.1, lr_vit_layer_decay=0.8, lr_component_decay=0.7, do_benchmark=False, dropout=0, drop_path=0.0, drop_mode='standard', drop_schedule='constant', cutoff_epoch=0, pretrained_encoder=None, pretrain_weights='rf-detr-large.pth', pretrain_exclude_keys=None, pretrain_keys_modify_to_load=None, pretrained_distiller=None, encoder='dinov2_windowed_base', vit_encoder_num_layers=12, window_block_indexes=None, position_embedding='sine', out_feature_indexes=[2, 5, 8, 11], freeze_encoder=False, layer_norm=True, rms_norm=False, backbone_lora=False, force_no_pretrain=False, dec_layers=3, dim_feedforward=2048, hidden_dim=384, sa_nheads=12, ca_nheads=24, num_queries=300, group_detr=13, two_stage=True, projector_scale=['P3', 'P5'], lite_refpoint_refine=True, num_select=300, dec_n_points=4, decoder_norm='LN', bbox_reparam=True, freeze_batch_norm=False, set_cost_class=2, set_cost_bbox=5, set_cost_giou=2, cls_loss_coef=1.0, bbox_loss_coef=5, giou_loss_coef=2, focal_alpha=0.25, aux_loss=True, sum_group_losses=False, use_varifocal_loss=False, use_position_supervised_loss=False, ia_bce_loss=True, dataset_file='roboflow', coco_path=None, dataset_dir='/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_5', square_resize_div_64=True, output_dir='./results_rfdetr_large_eval/fold_5/rfdetr_training_output', dont_save_weights=False, checkpoint_interval=10, seed=42, resume='', start_epoch=0, eval=False, use_ema=True, ema_decay=0.993, ema_tau=100, num_workers=2, device='cuda:0', world_size=1, dist_url='env://', sync_bn=True, fp16_eval=False, encoder_only=False, backbone_only=False, resolution=560, use_cls_token=False, multi_scale=True, expanded_scales=True, warmup_epochs=0, lr_scheduler='step', lr_min_factor=0.0, early_stopping=False, early_stopping_patience=10, early_stopping_min_delta=0.001, early_stopping_use_ema=False, gradient_checkpointing=False, tensorboard=True, wandb=False, project=None, run=None, class_names=['bark_beetle'], rank=0, gpu=0, distributed=True, dist_backend='nccl')
+number of params: 135152374
+[392, 448, 504, 560, 616, 672, 728, 784]
+loading annotations into memory...
+Done (t=0.59s)
+creating index...
+index created!
+[392, 448, 504, 560, 616, 672, 728, 784]
+loading annotations into memory...
+Done (t=0.30s)
+creating index...
+index created!
+Get benchmark
+Start training
+Grad accum steps:  32
+Total batch size:  32
+LENGTH OF DATA LOADER: 1230
+Epoch: [0]  [   0/1230]  eta: 6:15:39  lr: 0.000100  class_error: 0.00  loss: 10.1041 (10.1041)  loss_ce: 1.3504 (1.3504)  loss_bbox: 0.8375 (0.8375)  loss_giou: 0.2200 (0.2200)  loss_ce_0: 1.3076 (1.3076)  loss_bbox_0: 1.0765 (1.0765)  loss_giou_0: 0.2955 (0.2955)  loss_ce_1: 1.3405 (1.3405)  loss_bbox_1: 0.8966 (0.8966)  loss_giou_1: 0.2384 (0.2384)  loss_ce_enc: 1.3068 (1.3068)  loss_bbox_enc: 0.9461 (0.9461)  loss_giou_enc: 0.2881 (0.2881)  loss_ce_unscaled: 1.3504 (1.3504)  class_error_unscaled: 0.0000 (0.0000)  loss_bbox_unscaled: 0.1675 (0.1675)  loss_giou_unscaled: 0.1100 (0.1100)  cardinality_error_unscaled: 1.0000 (1.0000)  loss_ce_0_unscaled: 1.3076 (1.3076)  loss_bbox_0_unscaled: 0.2153 (0.2153)  loss_giou_0_unscaled: 0.1478 (0.1478)  cardinality_error_0_unscaled: 1.0000 (1.0000)  loss_ce_1_unscaled: 1.3405 (1.3405)  loss_bbox_1_unscaled: 0.1793 (0.1793)  loss_giou_1_unscaled: 0.1192 (0.1192)  cardinality_error_1_unscaled: 1.0000 (1.0000)  loss_ce_enc_unscaled: 1.3068 (1.3068)  loss_bbox_enc_unscaled: 0.1892 (0.1892)  loss_giou_enc_unscaled: 0.1441 (0.1441)  cardinality_error_enc_unscaled: 1.0000 (1.0000)  time: 18.3244  data: 8.4493  max mem: 7183
+Epoch: [0]  [  10/1230]  eta: 3:36:09  lr: 0.000100  class_error: 0.00  loss: 7.6456 (8.7978)  loss_ce: 1.3504 (1.2630)  loss_bbox: 0.2003 (0.4249)  loss_giou: 0.1115 (0.3089)  loss_ce_0: 1.3898 (1.2518)  loss_bbox_0: 0.3223 (0.5867)  loss_giou_0: 0.1640 (0.3905)  loss_ce_1: 1.3405 (1.2536)  loss_bbox_1: 0.2348 (0.4532)  loss_giou_1: 0.1163 (0.3380)  loss_ce_enc: 1.2945 (1.1890)  loss_bbox_enc: 0.6681 (0.8200)  loss_giou_enc: 0.3264 (0.5182)  loss_ce_unscaled: 1.3504 (1.2630)  class_error_unscaled: 0.0000 (0.0000)  loss_bbox_unscaled: 0.0401 (0.0850)  loss_giou_unscaled: 0.0558 (0.1545)  cardinality_error_unscaled: 1.0000 (1.3636)  loss_ce_0_unscaled: 1.3898 (1.2518)  loss_bbox_0_unscaled: 0.0645 (0.1173)  loss_giou_0_unscaled: 0.0820 (0.1952)  cardinality_error_0_unscaled: 1.0000 (1.3636)  loss_ce_1_unscaled: 1.3405 (1.2536)  loss_bbox_1_unscaled: 0.0470 (0.0906)  loss_giou_1_unscaled: 0.0582 (0.1690)  cardinality_error_1_unscaled: 1.0000 (1.3636)  loss_ce_enc_unscaled: 1.2945 (1.1890)  loss_bbox_enc_unscaled: 0.1336 (0.1640)  loss_giou_enc_unscaled: 0.1632 (0.2591)  cardinality_error_enc_unscaled: 1.0000 (1.3636)  time: 10.6305  data: 0.7951  max mem: 7183
+Epoch: [0]  [  20/1230]  eta: 3:27:04  lr: 0.000100  class_error: 0.00  loss: 6.6829 (7.5619)  loss_ce: 1.1623 (1.0861)  loss_bbox: 0.1477 (0.2994)  loss_giou: 0.0612 (0.2204)  loss_ce_0: 1.3898 (1.3019)  loss_bbox_0: 0.1759 (0.3905)  loss_giou_0: 0.0880 (0.2671)  loss_ce_1: 1.1407 (1.1571)  loss_bbox_1: 0.1742 (0.3118)  loss_giou_1: 0.0822 (0.2355)  loss_ce_enc: 1.3398 (1.2620)  loss_bbox_enc: 0.4566 (0.6391)  loss_giou_enc: 0.2535 (0.3909)  loss_ce_unscaled: 1.1623 (1.0861)  class_error_unscaled: 0.0000 (0.0000)  loss_bbox_unscaled: 0.0295 (0.0599)  loss_giou_unscaled: 0.0306 (0.1102)  cardinality_error_unscaled: 1.0000 (1.1905)  loss_ce_0_unscaled: 1.3898 (1.3019)  loss_bbox_0_unscaled: 0.0352 (0.0781)  loss_giou_0_unscaled: 0.0440 (0.1336)  cardinality_error_0_unscaled: 1.0000 (1.1905)  loss_ce_1_unscaled: 1.1407 (1.1571)  loss_bbox_1_unscaled: 0.0348 (0.0624)  loss_giou_1_unscaled: 0.0411 (0.1177)  cardinality_error_1_unscaled: 1.0000 (1.1905)  loss_ce_enc_unscaled: 1.3398 (1.2620)  loss_bbox_enc_unscaled: 0.0913 (0.1278)  loss_giou_enc_unscaled: 0.1267 (0.1954)  cardinality_error_enc_unscaled: 1.0000 (1.1905)  time: 9.8655  data: 0.0297  max mem: 7183
+Epoch: [0]  [  30/1230]  eta: 3:23:03  lr: 0.000100  class_error: 0.00  loss: 4.9659 (6.6439)  loss_ce: 0.5149 (0.8523)  loss_bbox: 0.1464 (0.2529)  loss_giou: 0.0603 (0.1726)  loss_ce_0: 1.3046 (1.2712)  loss_bbox_0: 0.1328 (0.3127)  loss_giou_0: 0.0727 (0.2051)  loss_ce_1: 0.7921 (0.9751)  loss_bbox_1: 0.1294 (0.2580)  loss_giou_1: 0.0606 (0.1818)  loss_ce_enc: 1.3850 (1.3054)  loss_bbox_enc: 0.3782 (0.5343)  loss_giou_enc: 0.1494 (0.3224)  loss_ce_unscaled: 0.5149 (0.8523)  class_error_unscaled: 0.0000 (0.0000)  loss_bbox_unscaled: 0.0293 (0.0506)  loss_giou_unscaled: 0.0301 (0.0863)  cardinality_error_unscaled: 1.0000 (1.1290)  loss_ce_0_unscaled: 1.3046 (1.2712)  loss_bbox_0_unscaled: 0.0266 (0.0625)  loss_giou_0_unscaled: 0.0364 (0.1025)  cardinality_error_0_unscaled: 1.0000 (1.1290)  loss_ce_1_unscaled: 0.7921 (0.9751)  loss_bbox_1_unscaled: 0.0259 (0.0516)  loss_giou_1_unscaled: 0.0303 (0.0909)  cardinality_error_1_unscaled: 1.0000 (1.1290)  loss_ce_enc_unscaled: 1.3850 (1.3054)  loss_bbox_enc_unscaled: 0.0756 (0.1069)  loss_giou_enc_unscaled: 0.0747 (0.1612)  cardinality_error_enc_unscaled: 1.0000 (1.1290)  time: 9.8904  data: 0.0296  max mem: 7183
+Epoch: [0]  [  40/1230]  eta: 3:20:19  lr: 0.000100  class_error: 0.00  loss: 4.5161 (6.1372)  loss_ce: 0.2820 (0.7106)  loss_bbox: 0.1312 (0.2499)  loss_giou: 0.0545 (0.1522)  loss_ce_0: 1.1115 (1.2101)  loss_bbox_0: 0.1093 (0.2877)  loss_giou_0: 0.0674 (0.1773)  loss_ce_1: 0.4565 (0.8448)  loss_bbox_1: 0.1132 (0.2502)  loss_giou_1: 0.0503 (0.1583)  loss_ce_enc: 1.3980 (1.3190)  loss_bbox_enc: 0.2922 (0.4893)  loss_giou_enc: 0.1477 (0.2878)  loss_ce_unscaled: 0.2820 (0.7106)  class_error_unscaled: 0.0000 (0.0000)  loss_bbox_unscaled: 0.0262 (0.0500)  loss_giou_unscaled: 0.0273 (0.0761)  cardinality_error_unscaled: 1.0000 (1.0976)  loss_ce_0_unscaled: 1.1115 (1.2101)  loss_bbox_0_unscaled: 0.0219 (0.0575)  loss_giou_0_unscaled: 0.0337 (0.0886)  cardinality_error_0_unscaled: 1.0000 (1.0976)  loss_ce_1_unscaled: 0.4565 (0.8448)  loss_bbox_1_unscaled: 0.0226 (0.0500)  loss_giou_1_unscaled: 0.0252 (0.0791)  cardinality_error_1_unscaled: 1.0000 (1.0976)  loss_ce_enc_unscaled: 1.3980 (1.3190)  loss_bbox_enc_unscaled: 0.0584 (0.0979)  loss_giou_enc_unscaled: 0.0738 (0.1439)  cardinality_error_enc_unscaled: 1.0000 (1.0976)  time: 9.9246  data: 0.0295  max mem: 7183
+
+CRITICAL SCRIPT-LEVEL ERROR ENCOUNTERED (see details above in this log or in the separate script_log_fold_...log):
+Caught FileNotFoundError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/datasets/coco.py", line 53, in __getitem__
+    img, target = super(CocoDetection, self).__getitem__(idx)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torchvision/datasets/coco.py", line 53, in __getitem__
+    image = self._load_image(id)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torchvision/datasets/coco.py", line 42, in _load_image
+    return Image.open(os.path.join(self.root, path)).convert("RGB")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_5/train/train_fold3_0216be816e3ac9f15436610a5ccdb513.png'
+
+
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/3_rfdetr/train/rfdetr_5fold.py", line 526, in train_single_fold
+    model_rf.train(**current_train_params)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/detr.py", line 36, in train
+    self.train_from_config(config, **kwargs)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/detr.py", line 103, in train_from_config
+    self.model.train(
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/main.py", line 299, in train
+    train_stats = train_one_epoch(
+                  ^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/engine.py", line 83, in train_one_epoch
+    for data_iter_step, (samples, targets) in enumerate(
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/util/misc.py", line 240, in log_every
+    for obj in iterable:
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1465, in _next_data
+    return self._process_data(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1491, in _process_data
+    data.reraise()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/_utils.py", line 715, in reraise
+    raise exception
+FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/datasets/coco.py", line 53, in __getitem__
+    img, target = super(CocoDetection, self).__getitem__(idx)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torchvision/datasets/coco.py", line 53, in __getitem__
+    image = self._load_image(id)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torchvision/datasets/coco.py", line 42, in _load_image
+    return Image.open(os.path.join(self.root, path)).convert("RGB")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_5/train/train_fold3_0216be816e3ac9f15436610a5ccdb513.png'
+
+
+--- End: RFDETR Lib Output Redirection for Fold 5 ---
+

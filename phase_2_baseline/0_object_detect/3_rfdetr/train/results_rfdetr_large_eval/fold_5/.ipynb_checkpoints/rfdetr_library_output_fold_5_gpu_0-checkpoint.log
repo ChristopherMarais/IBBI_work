@@ -1,0 +1,149 @@
+--- This is the start of redirected stdout/stderr for Fold 5 ---
+Script: Set CUDA_VISIBLE_DEVICES='0'
+Script: Set DDP-like env vars: MASTER_ADDR=localhost, PORT=29504, RANK=0, WORLD_SIZE=1, LOCAL_RANK=0
+Script: PyTorch active device context: cuda:0 (Physical GPU 0)
+Loading pretrain weights
+Script: Starting RFDETR native training with parameters for .train(): {'epochs': 3, 'batch_size': 1, 'grad_accum_steps': 32, 'lr': 0.0001, 'dataset_dir': '/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_5', 'output_dir': './results_rfdetr_large_eval/fold_5/rfdetr_training_output', 'device': 'cuda:0'}
+TensorBoard logging initialized. To monitor logs, use 'tensorboard --logdir ./results_rfdetr_large_eval/fold_5/rfdetr_training_output' and open http://localhost:6006/ in browser.
+| distributed init (rank 0): env://
+git:
+  sha: N/A, status: clean, branch: N/A
+
+Namespace(num_classes=1, grad_accum_steps=32, amp=True, lr=0.0001, lr_encoder=0.00015, batch_size=1, weight_decay=0.0001, epochs=3, lr_drop=100, clip_max_norm=0.1, lr_vit_layer_decay=0.8, lr_component_decay=0.7, do_benchmark=False, dropout=0, drop_path=0.0, drop_mode='standard', drop_schedule='constant', cutoff_epoch=0, pretrained_encoder=None, pretrain_weights='rf-detr-large.pth', pretrain_exclude_keys=None, pretrain_keys_modify_to_load=None, pretrained_distiller=None, encoder='dinov2_windowed_base', vit_encoder_num_layers=12, window_block_indexes=None, position_embedding='sine', out_feature_indexes=[2, 5, 8, 11], freeze_encoder=False, layer_norm=True, rms_norm=False, backbone_lora=False, force_no_pretrain=False, dec_layers=3, dim_feedforward=2048, hidden_dim=384, sa_nheads=12, ca_nheads=24, num_queries=300, group_detr=13, two_stage=True, projector_scale=['P3', 'P5'], lite_refpoint_refine=True, num_select=300, dec_n_points=4, decoder_norm='LN', bbox_reparam=True, freeze_batch_norm=False, set_cost_class=2, set_cost_bbox=5, set_cost_giou=2, cls_loss_coef=1.0, bbox_loss_coef=5, giou_loss_coef=2, focal_alpha=0.25, aux_loss=True, sum_group_losses=False, use_varifocal_loss=False, use_position_supervised_loss=False, ia_bce_loss=True, dataset_file='roboflow', coco_path=None, dataset_dir='/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_5', square_resize_div_64=True, output_dir='./results_rfdetr_large_eval/fold_5/rfdetr_training_output', dont_save_weights=False, checkpoint_interval=10, seed=42, resume='', start_epoch=0, eval=False, use_ema=True, ema_decay=0.993, ema_tau=100, num_workers=2, device='cuda:0', world_size=1, dist_url='env://', sync_bn=True, fp16_eval=False, encoder_only=False, backbone_only=False, resolution=560, use_cls_token=False, multi_scale=True, expanded_scales=True, warmup_epochs=0, lr_scheduler='step', lr_min_factor=0.0, early_stopping=False, early_stopping_patience=10, early_stopping_min_delta=0.001, early_stopping_use_ema=False, gradient_checkpointing=False, tensorboard=True, wandb=False, project=None, run=None, class_names=['bark_beetle'], rank=0, gpu=0, distributed=True, dist_backend='nccl')
+number of params: 135152374
+[392, 448, 504, 560, 616, 672, 728, 784]
+loading annotations into memory...
+Done (t=0.82s)
+creating index...
+index created!
+[392, 448, 504, 560, 616, 672, 728, 784]
+loading annotations into memory...
+Done (t=0.12s)
+creating index...
+index created!
+Get benchmark
+Start training
+Grad accum steps:  32
+Total batch size:  32
+LENGTH OF DATA LOADER: 1230
+Epoch: [0]  [   0/1230]  eta: 6:33:56  lr: 0.000100  class_error: 0.00  loss: 10.1041 (10.1041)  loss_ce: 1.3504 (1.3504)  loss_bbox: 0.8375 (0.8375)  loss_giou: 0.2200 (0.2200)  loss_ce_0: 1.3076 (1.3076)  loss_bbox_0: 1.0765 (1.0765)  loss_giou_0: 0.2955 (0.2955)  loss_ce_1: 1.3405 (1.3405)  loss_bbox_1: 0.8966 (0.8966)  loss_giou_1: 0.2384 (0.2384)  loss_ce_enc: 1.3068 (1.3068)  loss_bbox_enc: 0.9461 (0.9461)  loss_giou_enc: 0.2881 (0.2881)  loss_ce_unscaled: 1.3504 (1.3504)  class_error_unscaled: 0.0000 (0.0000)  loss_bbox_unscaled: 0.1675 (0.1675)  loss_giou_unscaled: 0.1100 (0.1100)  cardinality_error_unscaled: 1.0000 (1.0000)  loss_ce_0_unscaled: 1.3076 (1.3076)  loss_bbox_0_unscaled: 0.2153 (0.2153)  loss_giou_0_unscaled: 0.1478 (0.1478)  cardinality_error_0_unscaled: 1.0000 (1.0000)  loss_ce_1_unscaled: 1.3405 (1.3405)  loss_bbox_1_unscaled: 0.1793 (0.1793)  loss_giou_1_unscaled: 0.1192 (0.1192)  cardinality_error_1_unscaled: 1.0000 (1.0000)  loss_ce_enc_unscaled: 1.3068 (1.3068)  loss_bbox_enc_unscaled: 0.1892 (0.1892)  loss_giou_enc_unscaled: 0.1441 (0.1441)  cardinality_error_enc_unscaled: 1.0000 (1.0000)  time: 19.2168  data: 9.0298  max mem: 7186
+Epoch: [0]  [  10/1230]  eta: 3:51:05  lr: 0.000100  class_error: 0.00  loss: 8.1136 (9.1605)  loss_ce: 1.3504 (1.2367)  loss_bbox: 0.2343 (0.4964)  loss_giou: 0.1538 (0.3451)  loss_ce_0: 1.3817 (1.2338)  loss_bbox_0: 0.3596 (0.6870)  loss_giou_0: 0.1514 (0.4233)  loss_ce_1: 1.3405 (1.2335)  loss_bbox_1: 0.2938 (0.5427)  loss_giou_1: 0.1342 (0.3729)  loss_ce_enc: 1.3068 (1.1650)  loss_bbox_enc: 0.7002 (0.8692)  loss_giou_enc: 0.3075 (0.5548)  loss_ce_unscaled: 1.3504 (1.2367)  class_error_unscaled: 0.0000 (0.0000)  loss_bbox_unscaled: 0.0469 (0.0993)  loss_giou_unscaled: 0.0769 (0.1726)  cardinality_error_unscaled: 1.0000 (1.3636)  loss_ce_0_unscaled: 1.3817 (1.2338)  loss_bbox_0_unscaled: 0.0719 (0.1374)  loss_giou_0_unscaled: 0.0757 (0.2116)  cardinality_error_0_unscaled: 1.0000 (1.3636)  loss_ce_1_unscaled: 1.3405 (1.2335)  loss_bbox_1_unscaled: 0.0588 (0.1085)  loss_giou_1_unscaled: 0.0671 (0.1864)  cardinality_error_1_unscaled: 1.0000 (1.3636)  loss_ce_enc_unscaled: 1.3068 (1.1650)  loss_bbox_enc_unscaled: 0.1400 (0.1738)  loss_giou_enc_unscaled: 0.1537 (0.2774)  cardinality_error_enc_unscaled: 1.0000 (1.3636)  time: 11.3650  data: 0.8488  max mem: 7186
+Epoch: [0]  [  20/1230]  eta: 3:35:21  lr: 0.000100  class_error: 0.00  loss: 6.8730 (7.9109)  loss_ce: 1.0772 (1.1038)  loss_bbox: 0.1872 (0.3479)  loss_giou: 0.0743 (0.2488)  loss_ce_0: 1.3817 (1.2972)  loss_bbox_0: 0.2461 (0.4566)  loss_giou_0: 0.1175 (0.2922)  loss_ce_1: 1.1634 (1.1842)  loss_bbox_1: 0.1750 (0.3543)  loss_giou_1: 0.0685 (0.2505)  loss_ce_enc: 1.3318 (1.2410)  loss_bbox_enc: 0.5350 (0.7078)  loss_giou_enc: 0.2715 (0.4266)  loss_ce_unscaled: 1.0772 (1.1038)  class_error_unscaled: 0.0000 (0.0000)  loss_bbox_unscaled: 0.0374 (0.0696)  loss_giou_unscaled: 0.0371 (0.1244)  cardinality_error_unscaled: 1.0000 (1.1905)  loss_ce_0_unscaled: 1.3817 (1.2972)  loss_bbox_0_unscaled: 0.0492 (0.0913)  loss_giou_0_unscaled: 0.0588 (0.1461)  cardinality_error_0_unscaled: 1.0000 (1.1905)  loss_ce_1_unscaled: 1.1634 (1.1842)  loss_bbox_1_unscaled: 0.0350 (0.0709)  loss_giou_1_unscaled: 0.0343 (0.1253)  cardinality_error_1_unscaled: 1.0000 (1.1905)  loss_ce_enc_unscaled: 1.3318 (1.2410)  loss_bbox_enc_unscaled: 0.1070 (0.1416)  loss_giou_enc_unscaled: 0.1358 (0.2133)  cardinality_error_enc_unscaled: 1.0000 (1.1905)  time: 10.2518  data: 0.0300  max mem: 7186
+Epoch: [0]  [  30/1230]  eta: 3:28:58  lr: 0.000100  class_error: 0.00  loss: 5.5078 (7.0166)  loss_ce: 0.6167 (0.8899)  loss_bbox: 0.1664 (0.2927)  loss_giou: 0.0701 (0.1948)  loss_ce_0: 1.3646 (1.2940)  loss_bbox_0: 0.1539 (0.3623)  loss_giou_0: 0.0772 (0.2235)  loss_ce_1: 0.8660 (1.0367)  loss_bbox_1: 0.1192 (0.2952)  loss_giou_1: 0.0602 (0.1946)  loss_ce_enc: 1.3704 (1.2901)  loss_bbox_enc: 0.3927 (0.5929)  loss_giou_enc: 0.1878 (0.3499)  loss_ce_unscaled: 0.6167 (0.8899)  class_error_unscaled: 0.0000 (0.0000)  loss_bbox_unscaled: 0.0333 (0.0585)  loss_giou_unscaled: 0.0350 (0.0974)  cardinality_error_unscaled: 1.0000 (1.1290)  loss_ce_0_unscaled: 1.3646 (1.2940)  loss_bbox_0_unscaled: 0.0308 (0.0725)  loss_giou_0_unscaled: 0.0386 (0.1118)  cardinality_error_0_unscaled: 1.0000 (1.1290)  loss_ce_1_unscaled: 0.8660 (1.0367)  loss_bbox_1_unscaled: 0.0238 (0.0590)  loss_giou_1_unscaled: 0.0301 (0.0973)  cardinality_error_1_unscaled: 1.0000 (1.1290)  loss_ce_enc_unscaled: 1.3704 (1.2901)  loss_bbox_enc_unscaled: 0.0785 (0.1186)  loss_giou_enc_unscaled: 0.0939 (0.1749)  cardinality_error_enc_unscaled: 1.0000 (1.1290)  time: 9.9454  data: 0.0293  max mem: 7186
+Epoch: [0]  [  40/1230]  eta: 3:24:54  lr: 0.000100  class_error: 0.00  loss: 4.5804 (6.4711)  loss_ce: 0.2855 (0.7371)  loss_bbox: 0.1294 (0.2818)  loss_giou: 0.0648 (0.1717)  loss_ce_0: 1.1639 (1.2511)  loss_bbox_0: 0.1392 (0.3310)  loss_giou_0: 0.0713 (0.1928)  loss_ce_1: 0.5992 (0.8993)  loss_bbox_1: 0.1192 (0.2809)  loss_giou_1: 0.0673 (0.1708)  loss_ce_enc: 1.4022 (1.3171)  loss_bbox_enc: 0.3286 (0.5299)  loss_giou_enc: 0.1657 (0.3076)  loss_ce_unscaled: 0.2855 (0.7371)  class_error_unscaled: 0.0000 (0.0000)  loss_bbox_unscaled: 0.0259 (0.0564)  loss_giou_unscaled: 0.0324 (0.0859)  cardinality_error_unscaled: 1.0000 (1.0976)  loss_ce_0_unscaled: 1.1639 (1.2511)  loss_bbox_0_unscaled: 0.0278 (0.0662)  loss_giou_0_unscaled: 0.0356 (0.0964)  cardinality_error_0_unscaled: 1.0000 (1.0976)  loss_ce_1_unscaled: 0.5992 (0.8993)  loss_bbox_1_unscaled: 0.0238 (0.0562)  loss_giou_1_unscaled: 0.0337 (0.0854)  cardinality_error_1_unscaled: 1.0000 (1.0976)  loss_ce_enc_unscaled: 1.4022 (1.3171)  loss_bbox_enc_unscaled: 0.0657 (0.1060)  loss_giou_enc_unscaled: 0.0828 (0.1538)  cardinality_error_enc_unscaled: 1.0000 (1.0976)  time: 9.9671  data: 0.0294  max mem: 7186
+
+CRITICAL SCRIPT-LEVEL ERROR ENCOUNTERED (see details above in this log or in the separate script_log_fold_...log):
+Caught OSError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/ImageFile.py", line 280, in load
+    s = read(self.decodermaxblock)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/PngImagePlugin.py", line 989, in load_read
+    cid, pos, length = self.png.read()
+                       ^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/PngImagePlugin.py", line 173, in read
+    length = i32(s)
+             ^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/_binary.py", line 95, in i32be
+    return unpack_from(">I", c, o)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack_from requires a buffer of at least 4 bytes for unpacking 4 bytes at offset 0 (actual buffer size is 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/datasets/coco.py", line 53, in __getitem__
+    img, target = super(CocoDetection, self).__getitem__(idx)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torchvision/datasets/coco.py", line 53, in __getitem__
+    image = self._load_image(id)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torchvision/datasets/coco.py", line 42, in _load_image
+    return Image.open(os.path.join(self.root, path)).convert("RGB")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/Image.py", line 993, in convert
+    self.load()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/ImageFile.py", line 287, in load
+    raise OSError(msg) from e
+OSError: image file is truncated
+
+
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/3_rfdetr/train/rfdetr_5fold.py", line 526, in train_single_fold
+    model_rf.train(**current_train_params)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/detr.py", line 36, in train
+    self.train_from_config(config, **kwargs)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/detr.py", line 103, in train_from_config
+    self.model.train(
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/main.py", line 299, in train
+    train_stats = train_one_epoch(
+                  ^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/engine.py", line 83, in train_one_epoch
+    for data_iter_step, (samples, targets) in enumerate(
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/util/misc.py", line 240, in log_every
+    for obj in iterable:
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1465, in _next_data
+    return self._process_data(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1491, in _process_data
+    data.reraise()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/_utils.py", line 715, in reraise
+    raise exception
+OSError: Caught OSError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/ImageFile.py", line 280, in load
+    s = read(self.decodermaxblock)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/PngImagePlugin.py", line 989, in load_read
+    cid, pos, length = self.png.read()
+                       ^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/PngImagePlugin.py", line 173, in read
+    length = i32(s)
+             ^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/_binary.py", line 95, in i32be
+    return unpack_from(">I", c, o)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack_from requires a buffer of at least 4 bytes for unpacking 4 bytes at offset 0 (actual buffer size is 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/datasets/coco.py", line 53, in __getitem__
+    img, target = super(CocoDetection, self).__getitem__(idx)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torchvision/datasets/coco.py", line 53, in __getitem__
+    image = self._load_image(id)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torchvision/datasets/coco.py", line 42, in _load_image
+    return Image.open(os.path.join(self.root, path)).convert("RGB")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/Image.py", line 993, in convert
+    self.load()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/ImageFile.py", line 287, in load
+    raise OSError(msg) from e
+OSError: image file is truncated
+
+
+--- End: RFDETR Lib Output Redirection for Fold 5 ---
+

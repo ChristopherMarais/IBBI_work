@@ -1,0 +1,67 @@
+Starting rfdetr 5-Fold Training Script
+Job ID: 4222557
+Running on host: c1007a-s29.ufhpc
+Assigned GPUs: 0
+Current working directory: /blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/3_rfdetr/train
+Activating conda environment: EEL
+Conda environment activated.
+Python version: Python 3.11.10
+PyTorch version: 2.5.1+cu124
+CUDA available to PyTorch: True
+Number of GPUs PyTorch sees: 1
+Changed directory to: /blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/3_rfdetr/train
+Running Python script: rfdetr_5fold.py
+2025-06-01 15:39:07 - INFO - Executing RFDETRLarge Sequential Cross-Validation Training Script at 2025-06-01 15:39:07.403963.
+2025-06-01 15:39:07 - INFO - Starting 5-fold Cross-Validation for RFDETRLarge (SEQUENTIAL EXECUTION).
+2025-06-01 15:39:07 - INFO - Main results will be saved in: ./results_rfdetr_large_eval
+2025-06-01 15:39:07 - INFO - Base data path template: /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_{}
+2025-06-01 15:39:07 - INFO - Model: RFDETRLarge
+2025-06-01 15:39:07 - INFO - RFDETR Training Parameters (for .train() method): {'epochs': 3, 'batch_size': 1, 'grad_accum_steps': 32, 'lr': 0.0001}
+2025-06-01 15:39:07 - INFO - CUDA_LAUNCH_BLOCKING is set to 1 (helps with CUDA error reporting).
+2025-06-01 15:39:07 - INFO - TORCH_USE_CUDA_DSA is set to 1 (attempts detailed device-side assertions).
+2025-06-01 15:39:07 - INFO - All sequential folds will attempt to run on GPU: 0
+2025-06-01 15:39:07 - INFO - 
+========================= Starting Fold 1/5 =========================
+2025-06-01 15:39:24 - WARNING - num_classes mismatch: model has 90 classes, but your dataset has 1 classes
+reinitializing your detection head with 1 classes.
+2025-06-01 15:44:03 - INFO - Fold 1 processing finished. Log: ./results_rfdetr_large_eval/fold_1/script_log_fold_1_gpu_0.log
+2025-06-01 15:44:03 - INFO - ========================= Completed processing for Fold 1/5 =========================
+
+2025-06-01 15:44:03 - INFO - Cleared CUDA cache after Fold 1.
+2025-06-01 15:44:03 - INFO - 
+========================= Starting Fold 2/5 =========================
+2025-06-01 15:44:12 - WARNING - num_classes mismatch: model has 90 classes, but your dataset has 1 classes
+reinitializing your detection head with 1 classes.
+2025-06-01 15:56:29 - INFO - Fold 2 processing finished. Log: ./results_rfdetr_large_eval/fold_2/script_log_fold_2_gpu_0.log
+2025-06-01 15:56:29 - INFO - ========================= Completed processing for Fold 2/5 =========================
+
+2025-06-01 15:56:29 - INFO - Cleared CUDA cache after Fold 2.
+2025-06-01 15:56:29 - INFO - 
+========================= Starting Fold 3/5 =========================
+2025-06-01 15:56:39 - WARNING - num_classes mismatch: model has 90 classes, but your dataset has 1 classes
+reinitializing your detection head with 1 classes.
+2025-06-01 16:14:08 - INFO - Fold 3 processing finished. Log: ./results_rfdetr_large_eval/fold_3/script_log_fold_3_gpu_0.log
+2025-06-01 16:14:08 - INFO - ========================= Completed processing for Fold 3/5 =========================
+
+2025-06-01 16:14:08 - INFO - Cleared CUDA cache after Fold 3.
+2025-06-01 16:14:08 - INFO - 
+========================= Starting Fold 4/5 =========================
+2025-06-01 16:14:22 - WARNING - num_classes mismatch: model has 90 classes, but your dataset has 1 classes
+reinitializing your detection head with 1 classes.
+2025-06-01 17:03:23 - INFO - Fold 4 processing finished. Log: ./results_rfdetr_large_eval/fold_4/script_log_fold_4_gpu_0.log
+2025-06-01 17:03:23 - INFO - ========================= Completed processing for Fold 4/5 =========================
+
+2025-06-01 17:03:23 - INFO - Cleared CUDA cache after Fold 4.
+2025-06-01 17:03:23 - INFO - 
+========================= Starting Fold 5/5 =========================
+2025-06-01 17:03:35 - WARNING - num_classes mismatch: model has 90 classes, but your dataset has 1 classes
+reinitializing your detection head with 1 classes.
+2025-06-01 17:11:22 - INFO - Fold 5 processing finished. Log: ./results_rfdetr_large_eval/fold_5/script_log_fold_5_gpu_0.log
+2025-06-01 17:11:22 - INFO - ========================= Completed processing for Fold 5/5 =========================
+
+2025-06-01 17:11:22 - INFO - Cleared CUDA cache after Fold 5.
+2025-06-01 17:11:22 - INFO - All 5-fold Cross-Validation tasks have finished.
+2025-06-01 17:11:22 - INFO - Check the ./results_rfdetr_large_eval directory for all outputs and logs.
+2025-06-01 17:11:22 - INFO - Script execution finished at 2025-06-01 17:11:22.163947. Total duration: 0 days 01:32:14.759984.
+Python script finished.
+End of Slurm job.

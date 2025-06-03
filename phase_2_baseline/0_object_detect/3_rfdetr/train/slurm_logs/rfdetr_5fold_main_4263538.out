@@ -1,0 +1,26 @@
+Starting rfdetr 5-Fold Training Script
+Job ID: 4263538
+Running on host: c1007a-s29.ufhpc
+Assigned GPUs: 0
+Current working directory: /blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/3_rfdetr/train
+Activating conda environment: EEL
+Conda environment activated.
+Python version: Python 3.11.10
+PyTorch version: 2.5.1+cu124
+CUDA available to PyTorch: True
+Number of GPUs PyTorch sees: 1
+Changed directory to: /blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/3_rfdetr/train
+Running Python script: rfdetr_5fold.py
+2025-06-02 15:19:46 - INFO - Executing RFDETRLarge Sequential Cross-Validation Training Script at 2025-06-02 15:19:46.958384.
+2025-06-02 15:19:46 - INFO - Starting 5-fold Cross-Validation for RFDETRLarge (SEQUENTIAL EXECUTION).
+2025-06-02 15:19:46 - INFO - Main results will be saved in: ./results_rfdetr_large_eval
+2025-06-02 15:19:46 - INFO - Base data path template: /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_{}
+2025-06-02 15:19:46 - INFO - Model: RFDETRLarge
+2025-06-02 15:19:46 - INFO - RFDETR Training Parameters (for .train() method): {'epochs': 3, 'batch_size': 1, 'grad_accum_steps': 32, 'lr': 0.0001, 'checkpoint_interval': 1}
+2025-06-02 15:19:46 - INFO - CUDA_LAUNCH_BLOCKING is set to 1 (helps with CUDA error reporting).
+2025-06-02 15:19:46 - INFO - TORCH_USE_CUDA_DSA is set to 1 (attempts detailed device-side assertions).
+2025-06-02 15:19:46 - INFO - All sequential folds will attempt to run on GPU: 0
+2025-06-02 15:19:46 - INFO - 
+========================= Starting Fold 1/5 =========================
+2025-06-02 15:20:00 - WARNING - num_classes mismatch: model has 90 classes, but your dataset has 1 classes
+reinitializing your detection head with 1 classes.

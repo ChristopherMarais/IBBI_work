@@ -1,0 +1,28 @@
+--- This is the start of redirected stdout/stderr for Fold 1 ---
+Script: Set CUDA_VISIBLE_DEVICES='0'
+Script: Set DDP-like env vars: MASTER_ADDR=localhost, PORT=29500, RANK=0, WORLD_SIZE=1, LOCAL_RANK=0
+Script: PyTorch active device context: cuda:0 (Physical GPU 0)
+Loading pretrain weights
+Script: Starting RFDETR native training with parameters for .train(): {'epochs': 3, 'batch_size': 1, 'grad_accum_steps': 32, 'lr': 0.0001, 'dataset_dir': '/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_1', 'output_dir': './results_rfdetr_large_eval/fold_1/rfdetr_training_output', 'device': 'cuda:0'}
+TensorBoard logging initialized. To monitor logs, use 'tensorboard --logdir ./results_rfdetr_large_eval/fold_1/rfdetr_training_output' and open http://localhost:6006/ in browser.
+| distributed init (rank 0): env://
+git:
+  sha: N/A, status: clean, branch: N/A
+
+Namespace(num_classes=1, grad_accum_steps=32, amp=True, lr=0.0001, lr_encoder=0.00015, batch_size=1, weight_decay=0.0001, epochs=3, lr_drop=100, clip_max_norm=0.1, lr_vit_layer_decay=0.8, lr_component_decay=0.7, do_benchmark=False, dropout=0, drop_path=0.0, drop_mode='standard', drop_schedule='constant', cutoff_epoch=0, pretrained_encoder=None, pretrain_weights='rf-detr-large.pth', pretrain_exclude_keys=None, pretrain_keys_modify_to_load=None, pretrained_distiller=None, encoder='dinov2_windowed_base', vit_encoder_num_layers=12, window_block_indexes=None, position_embedding='sine', out_feature_indexes=[2, 5, 8, 11], freeze_encoder=False, layer_norm=True, rms_norm=False, backbone_lora=False, force_no_pretrain=False, dec_layers=3, dim_feedforward=2048, hidden_dim=384, sa_nheads=12, ca_nheads=24, num_queries=300, group_detr=13, two_stage=True, projector_scale=['P3', 'P5'], lite_refpoint_refine=True, num_select=300, dec_n_points=4, decoder_norm='LN', bbox_reparam=True, freeze_batch_norm=False, set_cost_class=2, set_cost_bbox=5, set_cost_giou=2, cls_loss_coef=1.0, bbox_loss_coef=5, giou_loss_coef=2, focal_alpha=0.25, aux_loss=True, sum_group_losses=False, use_varifocal_loss=False, use_position_supervised_loss=False, ia_bce_loss=True, dataset_file='roboflow', coco_path=None, dataset_dir='/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_1', square_resize_div_64=True, output_dir='./results_rfdetr_large_eval/fold_1/rfdetr_training_output', dont_save_weights=False, checkpoint_interval=10, seed=42, resume='', start_epoch=0, eval=False, use_ema=True, ema_decay=0.993, ema_tau=100, num_workers=2, device='cuda:0', world_size=1, dist_url='env://', sync_bn=True, fp16_eval=False, encoder_only=False, backbone_only=False, resolution=560, use_cls_token=False, multi_scale=True, expanded_scales=True, warmup_epochs=0, lr_scheduler='step', lr_min_factor=0.0, early_stopping=False, early_stopping_patience=10, early_stopping_min_delta=0.001, early_stopping_use_ema=False, gradient_checkpointing=False, tensorboard=True, wandb=False, project=None, run=None, class_names=['bark_beetle'], rank=0, gpu=0, distributed=True, dist_backend='nccl')
+number of params: 135152374
+[392, 448, 504, 560, 616, 672, 728, 784]
+loading annotations into memory...
+Done (t=0.76s)
+creating index...
+index created!
+[392, 448, 504, 560, 616, 672, 728, 784]
+loading annotations into memory...
+Done (t=0.12s)
+creating index...
+index created!
+Get benchmark
+Start training
+Grad accum steps:  32
+Total batch size:  32
+LENGTH OF DATA LOADER: 1229

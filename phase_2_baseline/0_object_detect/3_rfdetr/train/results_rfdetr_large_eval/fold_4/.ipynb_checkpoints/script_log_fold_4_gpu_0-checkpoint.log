@@ -1,0 +1,105 @@
+2025-06-01 16:14:08 - Fold-4 - INFO - Initializing training for Fold 4 on effective target: GPU 0.
+2025-06-01 16:14:08 - Fold-4 - INFO - --- Starting Annotation Validation ---
+2025-06-01 16:14:08 - Fold-4 - INFO - Validating COCO annotations file: /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4/train/_annotations.coco.json
+2025-06-01 16:14:15 - Fold-4 - INFO - Found 124238 annotations and 39359 images in /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4/train/_annotations.coco.json.
+2025-06-01 16:14:16 - Fold-4 - INFO - CATEGORY ID CHECK: IDs found in /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4/train/_annotations.coco.json range from 0 to 1 (inclusive). Total unique category IDs found: 2. 
+2025-06-01 16:14:16 - Fold-4 - WARNING - USER ACTION: Ensure this maximum ID (1) is compatible with the RFDETRLarge model's expected number of classes. If the model expects N classes (typically 0 to N-1), a max_cat_id of 1 implies at least 2 classes are needed. A mismatch is a common cause of CUDA errors during model initialization.
+2025-06-01 16:14:16 - Fold-4 - INFO - Annotation file /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4/train/_annotations.coco.json passed basic structural validation checks.
+2025-06-01 16:14:16 - Fold-4 - INFO - Validating COCO annotations file: /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4/valid/_annotations.coco.json
+2025-06-01 16:14:16 - Fold-4 - INFO - Found 31106 annotations and 9840 images in /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4/valid/_annotations.coco.json.
+2025-06-01 16:14:16 - Fold-4 - INFO - CATEGORY ID CHECK: IDs found in /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4/valid/_annotations.coco.json range from 0 to 1 (inclusive). Total unique category IDs found: 2. 
+2025-06-01 16:14:16 - Fold-4 - WARNING - USER ACTION: Ensure this maximum ID (1) is compatible with the RFDETRLarge model's expected number of classes. If the model expects N classes (typically 0 to N-1), a max_cat_id of 1 implies at least 2 classes are needed. A mismatch is a common cause of CUDA errors during model initialization.
+2025-06-01 16:14:16 - Fold-4 - INFO - Annotation file /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4/valid/_annotations.coco.json passed basic structural validation checks.
+2025-06-01 16:14:16 - Fold-4 - INFO - --- Annotation Validation Passed (basic structural checks completed) ---
+2025-06-01 16:14:16 - Fold-4 - INFO - Base data directory for RFDETR for this fold: /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4
+2025-06-01 16:14:16 - Fold-4 - INFO - Custom eval will use VALIDATION images from: /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4/valid
+2025-06-01 16:14:16 - Fold-4 - INFO - Custom eval will use VALIDATION annotations from: /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4/valid/_annotations.coco.json
+2025-06-01 16:14:16 - Fold-4 - INFO - RFDETR library's native stdout/stderr redirected to: ./results_rfdetr_large_eval/fold_4/rfdetr_library_output_fold_4_gpu_0.log
+2025-06-01 16:14:16 - Fold-4 - INFO - Set CUDA_VISIBLE_DEVICES='0' for RFDETR context.
+2025-06-01 16:14:16 - Fold-4 - INFO - Set DDP-like env vars: MASTER_ADDR=localhost, PORT=29503, RANK=0, WORLD_SIZE=1, LOCAL_RANK=0
+2025-06-01 16:14:16 - Fold-4 - INFO - PyTorch active device context set to: cuda:0 (Logical, maps to physical GPU 0).
+2025-06-01 16:14:16 - Fold-4 - INFO - RFDETRLarge.__init__ will likely attempt to initialize model on device type: 'cuda'.
+2025-06-01 16:14:16 - Fold-4 - INFO - The .train() method will later be called with device parameter: 'cuda:0'.
+2025-06-01 16:14:16 - Fold-4 - WARNING - USER ACTION REQUIRED: Re-check the 'max category_id' logged by the annotation validator. If this ID is out of bounds for the number of classes your RFDETRLarge model expects (especially if pre-trained), it's a VERY COMMON cause of CUDA asserts during model initialization (e.g., when creating embedding layers or classification heads).
+2025-06-01 16:14:16 - Fold-4 - INFO - DEBUG TIP: If your RFDETRLarge library allows it (e.g., via an argument like RFDETRLarge(checkpoint_path=None) or RFDETRLarge(load_pretrained_weights=False)), try initializing the model *without* its pre-trained weights. If the error disappears, the issue is likely with the checkpoint file itself (corruption, incompatibility).
+2025-06-01 16:14:21 - Fold-4 - INFO - Successfully called RFDETRLarge() constructor.
+2025-06-01 16:14:21 - Fold-4 - WARNING - Could not access model_rf.model.parameters() to determine device. Structure might be different.
+2025-06-01 16:14:21 - Fold-4 - INFO - Starting RFDETR native training with parameters for its .train() method: {'epochs': 3, 'batch_size': 1, 'grad_accum_steps': 32, 'lr': 0.0001, 'dataset_dir': '/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4', 'output_dir': './results_rfdetr_large_eval/fold_4/rfdetr_training_output', 'device': 'cuda:0'}
+2025-06-01 17:03:22 - Fold-4 - ERROR - ERROR during RFDETR instantiation or training for Fold 4: Caught FileNotFoundError in DataLoader worker process 1.
+Original Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/datasets/coco.py", line 53, in __getitem__
+    img, target = super(CocoDetection, self).__getitem__(idx)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torchvision/datasets/coco.py", line 53, in __getitem__
+    image = self._load_image(id)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torchvision/datasets/coco.py", line 42, in _load_image
+    return Image.open(os.path.join(self.root, path)).convert("RGB")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4/train/train_fold3_3f5405046e601f90f613687d81b99c02.png'
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/3_rfdetr/train/rfdetr_5fold.py", line 526, in train_single_fold
+    model_rf.train(**current_train_params)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/detr.py", line 36, in train
+    self.train_from_config(config, **kwargs)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/detr.py", line 103, in train_from_config
+    self.model.train(
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/main.py", line 299, in train
+    train_stats = train_one_epoch(
+                  ^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/engine.py", line 83, in train_one_epoch
+    for data_iter_step, (samples, targets) in enumerate(
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/util/misc.py", line 240, in log_every
+    for obj in iterable:
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1465, in _next_data
+    return self._process_data(data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1491, in _process_data
+    data.reraise()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/_utils.py", line 715, in reraise
+    raise exception
+FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 1.
+Original Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/rfdetr/datasets/coco.py", line 53, in __getitem__
+    img, target = super(CocoDetection, self).__getitem__(idx)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torchvision/datasets/coco.py", line 53, in __getitem__
+    image = self._load_image(id)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torchvision/datasets/coco.py", line 42, in _load_image
+    return Image.open(os.path.join(self.root, path)).convert("RGB")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_4/train/train_fold3_3f5405046e601f90f613687d81b99c02.png'
+
+2025-06-01 17:03:22 - Fold-4 - INFO - Restored main process stdout/stderr.
+2025-06-01 17:03:22 - Fold-4 - INFO - Restored environment variables to their pre-fold state.
+2025-06-01 17:03:22 - Fold-4 - INFO - Attempting to destroy distributed process group potentially initialized by RFDETR for Fold 4.
+2025-06-01 17:03:23 - Fold-4 - INFO - Distributed process group destroyed successfully.
+2025-06-01 17:03:23 - Fold-4 - ERROR - Training was not successful for this fold. Skipping metrics parsing and custom evaluation.

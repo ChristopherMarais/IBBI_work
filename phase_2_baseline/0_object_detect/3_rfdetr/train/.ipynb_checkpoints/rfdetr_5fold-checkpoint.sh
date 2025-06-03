@@ -4,15 +4,15 @@
 #SBATCH --error=./slurm_logs/rfdetr_5fold_main_%j.err
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=gmarais@ufl.edu # Update with your email if different
-#SBATCH --account=npadillacoreano            # Ensure this is your correct account
-#SBATCH --qos=npadillacoreano                # Ensure this is your correct QOS
+#SBATCH --account=hulcr            # Ensure this is your correct account
+#SBATCH --qos=hulcr                # Ensure this is your correct QOS
 #SBATCH --nodes=1                  # Running all 5 processes on a single node
 #SBATCH --ntasks=1                 # The python script itself is one main task that spawns others
-#SBATCH --cpus-per-task=24         # Increased CPUs for 5 parallel folds (5*(3 workers + 1 main) = 20, + buffer)
+#SBATCH --cpus-per-task=16         # Increased CPUs for 5 parallel folds (5*(3 workers + 1 main) = 20, + buffer)
                                    # If using fewer GPUs (e.g., 3), you can reduce this (e.g., to 16)
 #SBATCH --mem=128G                 # Total memory for the job (shared by all 5 python processes)
 #SBATCH --partition=gpu
-#SBATCH --gpus=a100:5              # Requesting 5 A100 GPUs for 5 folds.
+#SBATCH --gpus=a100:1              # Requesting 5 A100 GPUs for 5 folds.
 #SBATCH --time=72:00:00            # Max walltime
 
 # Ensure the output directory for Slurm logs exists

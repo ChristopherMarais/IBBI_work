@@ -1,2 +1,0 @@
-2025-05-20 13:30:20 - Fold-5_GPU-4_RFDETRLarge - INFO - Initializing training for Fold 5 on GPU 4 with model RFDETRLarge.
-2025-05-20 13:30:20 - Fold-5_GPU-4_RFDETRLarge - ERROR - CRITICAL - COCO annotations for train or valid not found in /blue/hulcr/gmarais/PhD/phase_1_data/2_object_detection_phase_2/coco_formatted_data/cv_iteration_5. Skipping fold.

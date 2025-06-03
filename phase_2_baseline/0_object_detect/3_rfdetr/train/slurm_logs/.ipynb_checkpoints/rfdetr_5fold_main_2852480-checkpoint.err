@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/3_rfdetr/train/rfdetr_5fold.py", line 12, in <module>
-    from supervision.metrics import MeanAveragePrecision
-ModuleNotFoundError: No module named 'supervision.metrics'

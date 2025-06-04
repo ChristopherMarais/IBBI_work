@@ -1,0 +1,195 @@
+CRITICAL ERROR in Fold-1_GPU-0: 'RTDETRDecoder' object has no attribute 'stride'
+See ./results_rtdetr-x/fold_1/script_log_fold_1_gpu_0.log and ./results_rtdetr-x/fold_1/ultralytics_output_fold_1_gpu_0.log for details.
+CRITICAL ERROR in Fold-2_GPU-1: 'RTDETRDecoder' object has no attribute 'stride'
+See ./results_rtdetr-x/fold_2/script_log_fold_2_gpu_1.log and ./results_rtdetr-x/fold_2/ultralytics_output_fold_2_gpu_1.log for details.
+CRITICAL ERROR in Fold-3_GPU-2: 'RTDETRDecoder' object has no attribute 'stride'
+See ./results_rtdetr-x/fold_3/script_log_fold_3_gpu_2.log and ./results_rtdetr-x/fold_3/ultralytics_output_fold_3_gpu_2.log for details.
+CRITICAL ERROR in Fold-5_GPU-4: 'RTDETRDecoder' object has no attribute 'stride'
+See ./results_rtdetr-x/fold_5/script_log_fold_5_gpu_4.log and ./results_rtdetr-x/fold_5/ultralytics_output_fold_5_gpu_4.log for details.
+CRITICAL ERROR in Fold-4_GPU-3: 'RTDETRDecoder' object has no attribute 'stride'
+See ./results_rtdetr-x/fold_4/script_log_fold_4_gpu_3.log and ./results_rtdetr-x/fold_4/ultralytics_output_fold_4_gpu_3.log for details.
+Process Fold-5_GPU-4:
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/8_rtdetr/train/rtdetr_5fold.py", line 164, in train_single_fold
+    results = model.train(**current_train_params)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 793, in train
+    self.trainer.train()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 211, in train
+    self._do_train(world_size)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 390, in _do_train
+    loss, self.loss_items = self.model(batch)
+                            ^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 114, in forward
+    return self.loss(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 311, in loss
+    self.criterion = self.init_criterion()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 446, in init_criterion
+    return E2EDetectLoss(self) if getattr(self, "end2end", False) else v8DetectionLoss(self)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/utils/loss.py", line 176, in __init__
+    self.stride = m.stride  # model strides
+                  ^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1931, in __getattr__
+    raise AttributeError(
+AttributeError: 'RTDETRDecoder' object has no attribute 'stride'
+Process Fold-2_GPU-1:
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/8_rtdetr/train/rtdetr_5fold.py", line 164, in train_single_fold
+    results = model.train(**current_train_params)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 793, in train
+    self.trainer.train()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 211, in train
+    self._do_train(world_size)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 390, in _do_train
+    loss, self.loss_items = self.model(batch)
+                            ^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 114, in forward
+    return self.loss(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 311, in loss
+    self.criterion = self.init_criterion()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 446, in init_criterion
+    return E2EDetectLoss(self) if getattr(self, "end2end", False) else v8DetectionLoss(self)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/utils/loss.py", line 176, in __init__
+    self.stride = m.stride  # model strides
+                  ^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1931, in __getattr__
+    raise AttributeError(
+AttributeError: 'RTDETRDecoder' object has no attribute 'stride'
+Process Fold-1_GPU-0:
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/8_rtdetr/train/rtdetr_5fold.py", line 164, in train_single_fold
+    results = model.train(**current_train_params)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 793, in train
+    self.trainer.train()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 211, in train
+    self._do_train(world_size)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 390, in _do_train
+    loss, self.loss_items = self.model(batch)
+                            ^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 114, in forward
+    return self.loss(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 311, in loss
+    self.criterion = self.init_criterion()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 446, in init_criterion
+    return E2EDetectLoss(self) if getattr(self, "end2end", False) else v8DetectionLoss(self)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/utils/loss.py", line 176, in __init__
+    self.stride = m.stride  # model strides
+                  ^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1931, in __getattr__
+    raise AttributeError(
+AttributeError: 'RTDETRDecoder' object has no attribute 'stride'
+Process Fold-3_GPU-2:
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/8_rtdetr/train/rtdetr_5fold.py", line 164, in train_single_fold
+    results = model.train(**current_train_params)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 793, in train
+    self.trainer.train()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 211, in train
+    self._do_train(world_size)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 390, in _do_train
+    loss, self.loss_items = self.model(batch)
+                            ^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 114, in forward
+    return self.loss(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 311, in loss
+    self.criterion = self.init_criterion()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 446, in init_criterion
+    return E2EDetectLoss(self) if getattr(self, "end2end", False) else v8DetectionLoss(self)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/utils/loss.py", line 176, in __init__
+    self.stride = m.stride  # model strides
+                  ^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1931, in __getattr__
+    raise AttributeError(
+AttributeError: 'RTDETRDecoder' object has no attribute 'stride'
+Process Fold-4_GPU-3:
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/8_rtdetr/train/rtdetr_5fold.py", line 164, in train_single_fold
+    results = model.train(**current_train_params)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/model.py", line 793, in train
+    self.trainer.train()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 211, in train
+    self._do_train(world_size)
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/engine/trainer.py", line 390, in _do_train
+    loss, self.loss_items = self.model(batch)
+                            ^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 114, in forward
+    return self.loss(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 311, in loss
+    self.criterion = self.init_criterion()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 446, in init_criterion
+    return E2EDetectLoss(self) if getattr(self, "end2end", False) else v8DetectionLoss(self)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/ultralytics/utils/loss.py", line 176, in __init__
+    self.stride = m.stride  # model strides
+                  ^^^^^^^^
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1931, in __getattr__
+    raise AttributeError(
+AttributeError: 'RTDETRDecoder' object has no attribute 'stride'

@@ -1,0 +1,15 @@
+Starting rtdetr 5-Fold Training Script
+Job ID: 2926969
+Running on host: c1009a-s23.ufhpc
+Assigned GPUs: 0,1,2,3,4
+Current working directory: /home/gmarais/hulcr-blue/gmarais/PhD/phase_2_baseline/0_object_detection/8_rtdetr/train
+Activating conda environment: EEL
+Conda environment activated.
+Python version: Python 3.11.10
+PyTorch version: 2.5.1+cu124
+CUDA available to PyTorch: True
+Number of GPUs PyTorch sees: 5
+Changed directory to: /blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/8_rtdetr/train
+Running Python script: rtdetr_5fold.py
+Python script finished.
+End of Slurm job.

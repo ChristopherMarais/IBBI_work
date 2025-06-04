@@ -1,0 +1,43 @@
+Starting dinov2 5-Fold Training Script
+Job ID: 4290637
+Running on host: c0909a-s17.ufhpc
+Assigned GPUs: 0,1,2,3,4
+Current working directory: /blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/4_dinov2/train
+Activating conda environment: EEL
+Conda environment activated.
+Python version: Python 3.11.10
+PyTorch version: 2.5.1+cu124
+CUDA available to PyTorch: True
+Number of GPUs PyTorch sees: 5
+Changed directory to: /blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/4_dinov2/train/mmdetection
+Running Python script: dinov2_5fold.py
+2025-06-02 22:00:02 - MainProcess - INFO - MainProcess: Multiprocessing start method set to 'spawn'.
+2025-06-02 22:00:02 - MainProcess - INFO - MainProcess: Starting 5-fold cross-validation for DINOv2+FRCNN...
+2025-06-02 22:00:02 - MainProcess - INFO - MainProcess: Base results directory: ./results_dinov2_frcnn
+2025-06-02 22:00:02 - MainProcess - INFO - MainProcess: Base config: configs/dinov2/dinov2_faster_rcnn_fpn_coco.py
+2025-06-02 22:00:02 - MainProcess - INFO - MainProcess: Global Hyperparameter Overrides: {'epochs': 12, 'batch': 2, 'workers': 2, 'imgsz': 640, 'optimizer': 'AdamW', 'lr0': 0.0001, 'weight_decay': 0.0005, 'pretrained': True, 'resume': False, 'save_period': 1, 'seed': 42}
+2025-06-02 22:00:03 - MainProcess - INFO - MainProcess: Found 5 GPUs.
+2025-06-02 22:00:03 - MainProcess - INFO - MainProcess: GPU assignments for folds: [0, 1, 2, 3, 4]
+2025-06-02 22:00:03 - MainProcess - INFO - MainProcess: Started process Fold-1_GPU-0 (PID: 325977).
+2025-06-02 22:00:03 - MainProcess - INFO - MainProcess: Started process Fold-2_GPU-1 (PID: 325978).
+2025-06-02 22:00:03 - MainProcess - INFO - MainProcess: Started process Fold-3_GPU-2 (PID: 325979).
+2025-06-02 22:00:03 - MainProcess - INFO - MainProcess: Started process Fold-4_GPU-3 (PID: 325980).
+2025-06-02 22:00:03 - MainProcess - INFO - MainProcess: Started process Fold-5_GPU-4 (PID: 325981).
+2025-06-02 22:00:05 - Fold-3_GPU-2 - INFO - MainProcess: Multiprocessing start method set to 'spawn'.
+2025-06-02 22:00:05 - Fold-2_GPU-1 - INFO - MainProcess: Multiprocessing start method set to 'spawn'.
+2025-06-02 22:00:05 - Fold-4_GPU-3 - INFO - MainProcess: Multiprocessing start method set to 'spawn'.
+2025-06-02 22:00:05 - Fold-5_GPU-4 - INFO - MainProcess: Multiprocessing start method set to 'spawn'.
+2025-06-02 22:00:05 - Fold-1_GPU-0 - INFO - MainProcess: Multiprocessing start method set to 'spawn'.
+2025-06-02 22:00:18 - MainProcess - INFO - MainProcess: Process Fold-1_GPU-0 finished with exit code 1.
+2025-06-02 22:00:18 - MainProcess - ERROR - MainProcess: Process Fold-1_GPU-0 failed. Check logs in ./results_dinov2_frcnn.
+2025-06-02 22:00:18 - MainProcess - INFO - MainProcess: Process Fold-2_GPU-1 finished with exit code 1.
+2025-06-02 22:00:18 - MainProcess - ERROR - MainProcess: Process Fold-2_GPU-1 failed. Check logs in ./results_dinov2_frcnn.
+2025-06-02 22:00:18 - MainProcess - INFO - MainProcess: Process Fold-3_GPU-2 finished with exit code 1.
+2025-06-02 22:00:18 - MainProcess - ERROR - MainProcess: Process Fold-3_GPU-2 failed. Check logs in ./results_dinov2_frcnn.
+2025-06-02 22:00:18 - MainProcess - INFO - MainProcess: Process Fold-4_GPU-3 finished with exit code 1.
+2025-06-02 22:00:18 - MainProcess - ERROR - MainProcess: Process Fold-4_GPU-3 failed. Check logs in ./results_dinov2_frcnn.
+2025-06-02 22:00:18 - MainProcess - INFO - MainProcess: Process Fold-5_GPU-4 finished with exit code 1.
+2025-06-02 22:00:18 - MainProcess - ERROR - MainProcess: Process Fold-5_GPU-4 failed. Check logs in ./results_dinov2_frcnn.
+2025-06-02 22:00:18 - MainProcess - INFO - MainProcess: All training folds have completed.
+Python script finished.
+End of Slurm job.

@@ -24,3 +24,11 @@ Running Python script: rfdetr_5fold.py
 ========================= Starting Fold 1/5 =========================
 2025-06-02 15:20:00 - WARNING - num_classes mismatch: model has 90 classes, but your dataset has 1 classes
 reinitializing your detection head with 1 classes.
+2025-06-03 03:44:30 - INFO - Fold 1 processing finished. Log: ./results_rfdetr_large_eval/fold_1/script_log_fold_1_gpu_0.log
+2025-06-03 03:44:30 - INFO - ========================= Completed processing for Fold 1/5 =========================
+
+2025-06-03 03:44:30 - INFO - Cleared CUDA cache after Fold 1.
+2025-06-03 03:44:30 - INFO - 
+========================= Starting Fold 2/5 =========================
+2025-06-03 03:44:46 - WARNING - num_classes mismatch: model has 90 classes, but your dataset has 1 classes
+reinitializing your detection head with 1 classes.

@@ -1,7 +1,0 @@
-Traceback (most recent call last):
-  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/8_rtdetr/train/rtdetr_5fold.py", line 286, in <module>
-    run_cross_validation_training()
-  File "/blue/hulcr/gmarais/PhD/phase_2_baseline/0_object_detection/8_rtdetr/train/rtdetr_5fold.py", line 210, in run_cross_validation_training
-    logging.info(f"MainProcess: Global Training Hyperparameters (see TRAIN_HYPERPARAMS in script for full list): epochs={TRAIN_HYPERPARAMS['epochs']}, batch={TRAIN_HYPERPARAMS['batch']}, imgsz={TRAIN_HYPERPARAMS['imgsz']}, end2end={TRAIN_HYPERPARAMS['end2end']}")
-                                                                                                                                                                                                                                        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
-KeyError: 'end2end'

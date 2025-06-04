@@ -1,0 +1,100 @@
+/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/mmengine/optim/optimizer/zero_optimizer.py:11: DeprecationWarning: `TorchScript` support for functional optimizers is deprecated and will be removed in a future PyTorch release. Consider using the `torch.compile` optimizer instead.
+  from torch.distributed.optim import \
+/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/mmengine/optim/optimizer/zero_optimizer.py:11: DeprecationWarning: `TorchScript` support for functional optimizers is deprecated and will be removed in a future PyTorch release. Consider using the `torch.compile` optimizer instead.
+  from torch.distributed.optim import \
+/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/mmengine/optim/optimizer/zero_optimizer.py:11: DeprecationWarning: `TorchScript` support for functional optimizers is deprecated and will be removed in a future PyTorch release. Consider using the `torch.compile` optimizer instead.
+  from torch.distributed.optim import \
+/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/mmengine/optim/optimizer/zero_optimizer.py:11: DeprecationWarning: `TorchScript` support for functional optimizers is deprecated and will be removed in a future PyTorch release. Consider using the `torch.compile` optimizer instead.
+  from torch.distributed.optim import \
+/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/mmengine/optim/optimizer/zero_optimizer.py:11: DeprecationWarning: `TorchScript` support for functional optimizers is deprecated and will be removed in a future PyTorch release. Consider using the `torch.compile` optimizer instead.
+  from torch.distributed.optim import \
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/4_dinov2/train/mmdetection/tools/train.py", line 10, in <module>
+  File "/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/4_dinov2/train/mmdetection/tools/train.py", line 10, in <module>
+    from mmdet.utils import setup_cache_size_limit_of_dynamo
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/mmdet/__init__.py", line 16, in <module>
+    from mmdet.utils import setup_cache_size_limit_of_dynamo
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/mmdet/__init__.py", line 16, in <module>
+    assert (mmcv_version >= digit_version(mmcv_minimum_version)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MMCV==2.2.0 is used but incompatible. Please install mmcv>=2.0.0rc4, <2.2.0.
+    assert (mmcv_version >= digit_version(mmcv_minimum_version)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MMCV==2.2.0 is used but incompatible. Please install mmcv>=2.0.0rc4, <2.2.0.
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/4_dinov2/train/mmdetection/tools/train.py", line 10, in <module>
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/4_dinov2/train/mmdetection/tools/train.py", line 10, in <module>
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/4_dinov2/train/mmdetection/tools/train.py", line 10, in <module>
+    from mmdet.utils import setup_cache_size_limit_of_dynamo
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/mmdet/__init__.py", line 16, in <module>
+    from mmdet.utils import setup_cache_size_limit_of_dynamo
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/mmdet/__init__.py", line 16, in <module>
+    from mmdet.utils import setup_cache_size_limit_of_dynamo
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/site-packages/mmdet/__init__.py", line 16, in <module>
+    assert (mmcv_version >= digit_version(mmcv_minimum_version)
+    assert (mmcv_version >= digit_version(mmcv_minimum_version)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MMCV==2.2.0 is used but incompatible. Please install mmcv>=2.0.0rc4, <2.2.0.
+AssertionError: MMCV==2.2.0 is used but incompatible. Please install mmcv>=2.0.0rc4, <2.2.0.
+    assert (mmcv_version >= digit_version(mmcv_minimum_version)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MMCV==2.2.0 is used but incompatible. Please install mmcv>=2.0.0rc4, <2.2.0.
+CRITICAL ERROR in Fold-1_GPU-0: Command '['/blue/hulcr/gmarais/conda/envs/EEL/bin/python', 'tools/train.py', 'configs/dinov2/dinov2_faster_rcnn_fpn_coco.py', '--work-dir', './results_dinov2_frcnn/fold_1/dinov2_faster_rcnn_fpn_coco_e12_b2_lr0.0001', '--gpus', '1', '--cfg-options', 'data.train.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_1', 'data.train.ann_file=annotations/instances_train.json', 'data.train.img_prefix=train/', 'data.val.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_1', 'data.val.ann_file=annotations/instances_val.json', 'data.val.img_prefix=val/', 'data.test.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_1', 'data.test.ann_file=annotations/instances_val.json', 'data.test.img_prefix=val/', 'runner.max_epochs=12', 'data.samples_per_gpu=2', 'data.workers_per_gpu=2', 'optimizer.lr=0.0001', 'optimizer.weight_decay=0.0005', 'checkpoint_config.interval=1', 'data.train.pipeline.1.img_scale=(640, 640)', 'data.val.pipeline.0.img_scale=(640, 640)', 'data.test.pipeline.0.img_scale=(640, 640)', '--seed', '42', '--deterministic']' returned non-zero exit status 1.
+See logs for details.
+Process Fold-1_GPU-0:
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/4_dinov2/train/mmdetection/dinov2_5fold.py", line 185, in train_single_fold
+    raise subprocess.CalledProcessError(process_result.returncode, cmd)
+subprocess.CalledProcessError: Command '['/blue/hulcr/gmarais/conda/envs/EEL/bin/python', 'tools/train.py', 'configs/dinov2/dinov2_faster_rcnn_fpn_coco.py', '--work-dir', './results_dinov2_frcnn/fold_1/dinov2_faster_rcnn_fpn_coco_e12_b2_lr0.0001', '--gpus', '1', '--cfg-options', 'data.train.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_1', 'data.train.ann_file=annotations/instances_train.json', 'data.train.img_prefix=train/', 'data.val.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_1', 'data.val.ann_file=annotations/instances_val.json', 'data.val.img_prefix=val/', 'data.test.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_1', 'data.test.ann_file=annotations/instances_val.json', 'data.test.img_prefix=val/', 'runner.max_epochs=12', 'data.samples_per_gpu=2', 'data.workers_per_gpu=2', 'optimizer.lr=0.0001', 'optimizer.weight_decay=0.0005', 'checkpoint_config.interval=1', 'data.train.pipeline.1.img_scale=(640, 640)', 'data.val.pipeline.0.img_scale=(640, 640)', 'data.test.pipeline.0.img_scale=(640, 640)', '--seed', '42', '--deterministic']' returned non-zero exit status 1.
+CRITICAL ERROR in Fold-4_GPU-3: Command '['/blue/hulcr/gmarais/conda/envs/EEL/bin/python', 'tools/train.py', 'configs/dinov2/dinov2_faster_rcnn_fpn_coco.py', '--work-dir', './results_dinov2_frcnn/fold_4/dinov2_faster_rcnn_fpn_coco_e12_b2_lr0.0001', '--gpus', '1', '--cfg-options', 'data.train.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_4', 'data.train.ann_file=annotations/instances_train.json', 'data.train.img_prefix=train/', 'data.val.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_4', 'data.val.ann_file=annotations/instances_val.json', 'data.val.img_prefix=val/', 'data.test.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_4', 'data.test.ann_file=annotations/instances_val.json', 'data.test.img_prefix=val/', 'runner.max_epochs=12', 'data.samples_per_gpu=2', 'data.workers_per_gpu=2', 'optimizer.lr=0.0001', 'optimizer.weight_decay=0.0005', 'checkpoint_config.interval=1', 'data.train.pipeline.1.img_scale=(640, 640)', 'data.val.pipeline.0.img_scale=(640, 640)', 'data.test.pipeline.0.img_scale=(640, 640)', '--seed', '42', '--deterministic']' returned non-zero exit status 1.
+See logs for details.
+Process Fold-4_GPU-3:
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/4_dinov2/train/mmdetection/dinov2_5fold.py", line 185, in train_single_fold
+    raise subprocess.CalledProcessError(process_result.returncode, cmd)
+subprocess.CalledProcessError: Command '['/blue/hulcr/gmarais/conda/envs/EEL/bin/python', 'tools/train.py', 'configs/dinov2/dinov2_faster_rcnn_fpn_coco.py', '--work-dir', './results_dinov2_frcnn/fold_4/dinov2_faster_rcnn_fpn_coco_e12_b2_lr0.0001', '--gpus', '1', '--cfg-options', 'data.train.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_4', 'data.train.ann_file=annotations/instances_train.json', 'data.train.img_prefix=train/', 'data.val.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_4', 'data.val.ann_file=annotations/instances_val.json', 'data.val.img_prefix=val/', 'data.test.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_4', 'data.test.ann_file=annotations/instances_val.json', 'data.test.img_prefix=val/', 'runner.max_epochs=12', 'data.samples_per_gpu=2', 'data.workers_per_gpu=2', 'optimizer.lr=0.0001', 'optimizer.weight_decay=0.0005', 'checkpoint_config.interval=1', 'data.train.pipeline.1.img_scale=(640, 640)', 'data.val.pipeline.0.img_scale=(640, 640)', 'data.test.pipeline.0.img_scale=(640, 640)', '--seed', '42', '--deterministic']' returned non-zero exit status 1.
+CRITICAL ERROR in Fold-3_GPU-2: Command '['/blue/hulcr/gmarais/conda/envs/EEL/bin/python', 'tools/train.py', 'configs/dinov2/dinov2_faster_rcnn_fpn_coco.py', '--work-dir', './results_dinov2_frcnn/fold_3/dinov2_faster_rcnn_fpn_coco_e12_b2_lr0.0001', '--gpus', '1', '--cfg-options', 'data.train.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3', 'data.train.ann_file=annotations/instances_train.json', 'data.train.img_prefix=train/', 'data.val.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3', 'data.val.ann_file=annotations/instances_val.json', 'data.val.img_prefix=val/', 'data.test.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3', 'data.test.ann_file=annotations/instances_val.json', 'data.test.img_prefix=val/', 'runner.max_epochs=12', 'data.samples_per_gpu=2', 'data.workers_per_gpu=2', 'optimizer.lr=0.0001', 'optimizer.weight_decay=0.0005', 'checkpoint_config.interval=1', 'data.train.pipeline.1.img_scale=(640, 640)', 'data.val.pipeline.0.img_scale=(640, 640)', 'data.test.pipeline.0.img_scale=(640, 640)', '--seed', '42', '--deterministic']' returned non-zero exit status 1.
+See logs for details.
+Process Fold-3_GPU-2:
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/4_dinov2/train/mmdetection/dinov2_5fold.py", line 185, in train_single_fold
+    raise subprocess.CalledProcessError(process_result.returncode, cmd)
+subprocess.CalledProcessError: Command '['/blue/hulcr/gmarais/conda/envs/EEL/bin/python', 'tools/train.py', 'configs/dinov2/dinov2_faster_rcnn_fpn_coco.py', '--work-dir', './results_dinov2_frcnn/fold_3/dinov2_faster_rcnn_fpn_coco_e12_b2_lr0.0001', '--gpus', '1', '--cfg-options', 'data.train.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3', 'data.train.ann_file=annotations/instances_train.json', 'data.train.img_prefix=train/', 'data.val.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3', 'data.val.ann_file=annotations/instances_val.json', 'data.val.img_prefix=val/', 'data.test.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_3', 'data.test.ann_file=annotations/instances_val.json', 'data.test.img_prefix=val/', 'runner.max_epochs=12', 'data.samples_per_gpu=2', 'data.workers_per_gpu=2', 'optimizer.lr=0.0001', 'optimizer.weight_decay=0.0005', 'checkpoint_config.interval=1', 'data.train.pipeline.1.img_scale=(640, 640)', 'data.val.pipeline.0.img_scale=(640, 640)', 'data.test.pipeline.0.img_scale=(640, 640)', '--seed', '42', '--deterministic']' returned non-zero exit status 1.
+CRITICAL ERROR in Fold-5_GPU-4: Command '['/blue/hulcr/gmarais/conda/envs/EEL/bin/python', 'tools/train.py', 'configs/dinov2/dinov2_faster_rcnn_fpn_coco.py', '--work-dir', './results_dinov2_frcnn/fold_5/dinov2_faster_rcnn_fpn_coco_e12_b2_lr0.0001', '--gpus', '1', '--cfg-options', 'data.train.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_5', 'data.train.ann_file=annotations/instances_train.json', 'data.train.img_prefix=train/', 'data.val.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_5', 'data.val.ann_file=annotations/instances_val.json', 'data.val.img_prefix=val/', 'data.test.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_5', 'data.test.ann_file=annotations/instances_val.json', 'data.test.img_prefix=val/', 'runner.max_epochs=12', 'data.samples_per_gpu=2', 'data.workers_per_gpu=2', 'optimizer.lr=0.0001', 'optimizer.weight_decay=0.0005', 'checkpoint_config.interval=1', 'data.train.pipeline.1.img_scale=(640, 640)', 'data.val.pipeline.0.img_scale=(640, 640)', 'data.test.pipeline.0.img_scale=(640, 640)', '--seed', '42', '--deterministic']' returned non-zero exit status 1.
+See logs for details.
+Process Fold-5_GPU-4:
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/4_dinov2/train/mmdetection/dinov2_5fold.py", line 185, in train_single_fold
+    raise subprocess.CalledProcessError(process_result.returncode, cmd)
+subprocess.CalledProcessError: Command '['/blue/hulcr/gmarais/conda/envs/EEL/bin/python', 'tools/train.py', 'configs/dinov2/dinov2_faster_rcnn_fpn_coco.py', '--work-dir', './results_dinov2_frcnn/fold_5/dinov2_faster_rcnn_fpn_coco_e12_b2_lr0.0001', '--gpus', '1', '--cfg-options', 'data.train.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_5', 'data.train.ann_file=annotations/instances_train.json', 'data.train.img_prefix=train/', 'data.val.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_5', 'data.val.ann_file=annotations/instances_val.json', 'data.val.img_prefix=val/', 'data.test.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_5', 'data.test.ann_file=annotations/instances_val.json', 'data.test.img_prefix=val/', 'runner.max_epochs=12', 'data.samples_per_gpu=2', 'data.workers_per_gpu=2', 'optimizer.lr=0.0001', 'optimizer.weight_decay=0.0005', 'checkpoint_config.interval=1', 'data.train.pipeline.1.img_scale=(640, 640)', 'data.val.pipeline.0.img_scale=(640, 640)', 'data.test.pipeline.0.img_scale=(640, 640)', '--seed', '42', '--deterministic']' returned non-zero exit status 1.
+CRITICAL ERROR in Fold-2_GPU-1: Command '['/blue/hulcr/gmarais/conda/envs/EEL/bin/python', 'tools/train.py', 'configs/dinov2/dinov2_faster_rcnn_fpn_coco.py', '--work-dir', './results_dinov2_frcnn/fold_2/dinov2_faster_rcnn_fpn_coco_e12_b2_lr0.0001', '--gpus', '1', '--cfg-options', 'data.train.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_2', 'data.train.ann_file=annotations/instances_train.json', 'data.train.img_prefix=train/', 'data.val.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_2', 'data.val.ann_file=annotations/instances_val.json', 'data.val.img_prefix=val/', 'data.test.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_2', 'data.test.ann_file=annotations/instances_val.json', 'data.test.img_prefix=val/', 'runner.max_epochs=12', 'data.samples_per_gpu=2', 'data.workers_per_gpu=2', 'optimizer.lr=0.0001', 'optimizer.weight_decay=0.0005', 'checkpoint_config.interval=1', 'data.train.pipeline.1.img_scale=(640, 640)', 'data.val.pipeline.0.img_scale=(640, 640)', 'data.test.pipeline.0.img_scale=(640, 640)', '--seed', '42', '--deterministic']' returned non-zero exit status 1.
+See logs for details.
+Process Fold-2_GPU-1:
+Traceback (most recent call last):
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/blue/hulcr/gmarais/conda/envs/EEL/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/4_dinov2/train/mmdetection/dinov2_5fold.py", line 185, in train_single_fold
+    raise subprocess.CalledProcessError(process_result.returncode, cmd)
+subprocess.CalledProcessError: Command '['/blue/hulcr/gmarais/conda/envs/EEL/bin/python', 'tools/train.py', 'configs/dinov2/dinov2_faster_rcnn_fpn_coco.py', '--work-dir', './results_dinov2_frcnn/fold_2/dinov2_faster_rcnn_fpn_coco_e12_b2_lr0.0001', '--gpus', '1', '--cfg-options', 'data.train.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_2', 'data.train.ann_file=annotations/instances_train.json', 'data.train.img_prefix=train/', 'data.val.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_2', 'data.val.ann_file=annotations/instances_val.json', 'data.val.img_prefix=val/', 'data.test.data_root=/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco/cv_iteration_2', 'data.test.ann_file=annotations/instances_val.json', 'data.test.img_prefix=val/', 'runner.max_epochs=12', 'data.samples_per_gpu=2', 'data.workers_per_gpu=2', 'optimizer.lr=0.0001', 'optimizer.weight_decay=0.0005', 'checkpoint_config.interval=1', 'data.train.pipeline.1.img_scale=(640, 640)', 'data.val.pipeline.0.img_scale=(640, 640)', 'data.test.pipeline.0.img_scale=(640, 640)', '--seed', '42', '--deterministic']' returned non-zero exit status 1.

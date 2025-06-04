@@ -1,3 +1,7 @@
 [rank0]:[W602 15:20:00.319909917 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
 fatal: not a git repository (or any parent up to mount point /blue)
 Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[rank0]:[W603 03:44:46.858224452 ProcessGroupNCCL.cpp:4115] [PG ID 1 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+fatal: not a git repository (or any parent up to mount point /blue)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+slurmstepd: error: *** JOB 4263538 ON c1007a-s29 CANCELLED AT 2025-06-03T11:39:48 ***

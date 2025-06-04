@@ -61,6 +61,30 @@ logging.basicConfig(
     ]
 )
 
+### --- MODIFICATION START --- ###
+# 1. ADDED HELPER FUNCTION TO GET CLASS COUNT FROM COCO FILE
+def get_num_classes_from_coco(json_file_path):
+    """Reads a COCO annotation file and returns the number of classes."""
+    try:
+        with open(json_file_path, 'r') as f:
+            data = json.load(f)
+        if 'categories' in data and isinstance(data['categories'], list):
+            # This is the most reliable way: count the defined categories.
+            return len(data['categories'])
+        else:
+            # If no 'categories' key, infer from max annotation ID.
+            # This is a fallback and assumes zero-indexed, contiguous IDs.
+            max_id = -1
+            if 'annotations' in data and data['annotations']:
+                for ann in data['annotations']:
+                    if 'category_id' in ann and ann['category_id'] > max_id:
+                        max_id = ann['category_id']
+            # If max_id is 1, num_classes is 2 (0, 1). If max_id is -1, num_classes is 0.
+            return max_id + 1
+    except (FileNotFoundError, json.JSONDecodeError):
+        return 0 # Return 0 if file is invalid or not found
+### --- MODIFICATION END --- ###
+
 def validate_coco_annotations(json_file_path, fold_py_logger):
     fold_py_logger.info(f"Validating COCO annotations file: {json_file_path}")
     if not os.path.exists(json_file_path):
@@ -86,7 +110,7 @@ def validate_coco_annotations(json_file_path, fold_py_logger):
         
         if not data['categories']:
             fold_py_logger.warning(f"No categories defined in 'categories' list in {json_file_path}. "
-                                   "Model might rely on these for num_classes. Max category ID check will rely on annotations only.")
+                                     "Model might rely on these for num_classes. Max category ID check will rely on annotations only.")
         else:
             for cat_idx, cat in enumerate(data['categories']):
                 if 'id' not in cat:
@@ -104,7 +128,7 @@ def validate_coco_annotations(json_file_path, fold_py_logger):
             cat_id = ann.get('category_id')
 
             if cat_id is not None:
-                 all_cat_ids_from_anns.add(cat_id)
+                all_cat_ids_from_anns.add(cat_id)
             else:
                 fold_py_logger.error(f"  Annotation ID {ann_id_display} (Image ID {img_id}) is missing 'category_id'.")
                 has_critical_issues = True
@@ -140,7 +164,7 @@ def validate_coco_annotations(json_file_path, fold_py_logger):
         final_cat_ids = all_cat_ids_from_defs.union(all_cat_ids_from_anns)
         if not final_cat_ids and data.get('annotations'):
             fold_py_logger.warning(f"Annotations are present but NO category IDs were found in 'categories' list or in any 'annotation.category_id'. "
-                                   "This is highly problematic if the model requires class labels.")
+                                     "This is highly problematic if the model requires class labels.")
             # Not setting has_critical_issues = True here as some models might theoretically handle "no class" scenario.
             # But it's a big warning.
         elif final_cat_ids:
@@ -149,12 +173,12 @@ def validate_coco_annotations(json_file_path, fold_py_logger):
             fold_py_logger.info(f"CATEGORY ID CHECK: IDs found in {json_file_path} range from {min_cat_id} to {max_cat_id} (inclusive). "
                                 f"Total unique category IDs found: {len(final_cat_ids)}. ")
             fold_py_logger.warning(f"USER ACTION: Ensure this maximum ID ({max_cat_id}) is compatible with the {MODEL_DESCRIPTOR} model's "
-                                   "expected number of classes. If the model expects N classes (typically 0 to N-1), "
-                                   f"a max_cat_id of {max_cat_id} implies at least {max_cat_id + 1} classes are needed. "
-                                   "A mismatch is a common cause of CUDA errors during model initialization.")
+                                     "expected number of classes. If the model expects N classes (typically 0 to N-1), "
+                                     f"a max_cat_id of {max_cat_id} implies at least {max_cat_id + 1} classes are needed. "
+                                     "A mismatch is a common cause of CUDA errors during model initialization.")
             if min_cat_id < 0:
-                 fold_py_logger.error(f"Found negative category_id ({min_cat_id}). This is invalid for COCO and will likely cause errors.")
-                 has_critical_issues = True # Negative category IDs are definitively bad.
+                fold_py_logger.error(f"Found negative category_id ({min_cat_id}). This is invalid for COCO and will likely cause errors.")
+                has_critical_issues = True # Negative category IDs are definitively bad.
 
         if has_critical_issues:
             fold_py_logger.error(f"Critical issues found in {json_file_path}. Training for this fold may be unstable or fail.")
@@ -255,12 +279,12 @@ def generate_evaluation_outputs(eval_model, val_images_dir, val_annotations_path
             fold_py_logger.warning("Custom Eval - No class names from COCO 'categories' and none provided. Attempting to infer from GT annotation IDs.")
             all_gt_class_ids_list = [d.class_id for d in dataset_val.annotations.values() if d.class_id is not None and len(d.class_id) > 0]
             if all_gt_class_ids_list:
-                 all_gt_class_ids = np.concatenate(all_gt_class_ids_list)
-                 if len(all_gt_class_ids) > 0:
+                all_gt_class_ids = np.concatenate(all_gt_class_ids_list)
+                if len(all_gt_class_ids) > 0:
                     num_classes_inferred = int(np.max(all_gt_class_ids)) + 1
                     effective_classes = [f"class_{i}" for i in range(num_classes_inferred)]
                     fold_py_logger.info(f"Custom Eval - Inferred {num_classes_inferred} classes based on max GT ID: {effective_classes}")
-                 else:
+                else:
                     effective_classes = ["class_0"] # Fallback
                     fold_py_logger.warning("Custom Eval - GT annotations have no class_ids, using generic 'class_0'.")
             else:
@@ -356,9 +380,9 @@ def generate_evaluation_outputs(eval_model, val_images_dir, val_annotations_path
                 cm.plot(save_path=cm_path, class_names_rotation=45) # Updated for supervision's API if needed
                 fold_py_logger.info(f"Custom Eval - Saved FINAL confusion matrix to {cm_path}")
             except ValueError as ve: # Catch specific errors like "Targets and predictions have different number of classes"
-                 fold_py_logger.error(f"Custom Eval - ValueError generating confusion matrix: {ve}. Ensure class consistency.", exc_info=True)
+                fold_py_logger.error(f"Custom Eval - ValueError generating confusion matrix: {ve}. Ensure class consistency.", exc_info=True)
             except Exception as e_cm:
-                 fold_py_logger.error(f"Custom Eval - Error generating confusion matrix: {e_cm}", exc_info=True)
+                fold_py_logger.error(f"Custom Eval - Error generating confusion matrix: {e_cm}", exc_info=True)
         elif not effective_classes:
             fold_py_logger.warning("Custom Eval - No class names for confusion matrix. Skipping CM plot.")
         else: # No GT or no Pred data
@@ -410,6 +434,21 @@ def train_single_fold(fold_idx, target_gpu_id_for_this_fold):
             fold_py_logger.removeHandler(handler_to_close)
         return
     fold_py_logger.info("--- Annotation Validation Passed (basic structural checks completed) ---")
+
+    ### --- MODIFICATION START --- ###
+    # 2. DETERMINE NUMBER OF CLASSES AND MODIFY MODEL INITIALIZATION
+
+    # Get the number of classes directly from the training annotations file.
+    num_classes = get_num_classes_from_coco(train_ann_path_for_rfdetr)
+    fold_py_logger.info(f"Determined the model needs to support {num_classes} classes from '{train_ann_path_for_rfdetr}'.")
+
+    if num_classes == 0:
+        fold_py_logger.critical(f"Could not determine the number of classes from the annotation file. Found 0 categories. Skipping fold {fold_number_display}.")
+        for handler_to_close in list(fold_py_logger.handlers): # Clean up
+            handler_to_close.close()
+            fold_py_logger.removeHandler(handler_to_close)
+        return
+    ### --- MODIFICATION END --- ###
 
 
     actual_val_images_dir = os.path.join(dataset_root_dir_for_fold, "valid") # RFDETR uses 'valid'
@@ -490,16 +529,22 @@ def train_single_fold(fold_idx, target_gpu_id_for_this_fold):
                                "(especially if pre-trained), it's a VERY COMMON cause of CUDA asserts during model "
                                "initialization (e.g., when creating embedding layers or classification heads).")
         fold_py_logger.info("DEBUG TIP: If your RFDETRLarge library allows it (e.g., via an argument like "
-                            "RFDETRLarge(checkpoint_path=None) or RFDETRLarge(load_pretrained_weights=False)), "
-                            "try initializing the model *without* its pre-trained weights. If the error disappears, "
-                            "the issue is likely with the checkpoint file itself (corruption, incompatibility).")
+                               "RFDETRLarge(checkpoint_path=None) or RFDETRLarge(load_pretrained_weights=False)), "
+                               "try initializing the model *without* its pre-trained weights. If the error disappears, "
+                               "the issue is likely with the checkpoint file itself (corruption, incompatibility).")
 
-        # >>> THIS IS THE LINE WHERE THE ERROR OCCURRED IN FOLD 5's ORIGINAL LOG <<<
-        model_rf = RFDETRLarge()
-        # If the above line passes, the model object `model_rf` is created.
-        # The error "CUDA error: device-side assert triggered" in the log happened *during* this call.
-        # This means the `.to(device)` call is happening *inside* RFDETRLarge's __init__ process.
-        fold_py_logger.info(f"Successfully called RFDETRLarge() constructor.")
+        
+        ### --- MODIFICATION START --- ###
+        # 3. PASS THE `num_classes` VARIABLE TO THE MODEL CONSTRUCTOR
+        try:
+            # The argument name is likely 'num_classes'. Check your library's source or docs if this fails.
+            model_rf = RFDETRLarge(num_classes=num_classes)
+            fold_py_logger.info(f"Successfully called RFDETRLarge() constructor with num_classes={num_classes}.")
+        except TypeError as e:
+            fold_py_logger.error(f"CRITICAL: Failed to initialize RFDETRLarge with 'num_classes' argument. The library might use a different argument name (e.g., 'nc'). Please check the library's documentation.", exc_info=True)
+            raise e # Re-raise the exception to stop the script
+        ### --- MODIFICATION END --- ###
+
 
         try:
             # Let's try to find out what device the model's parameters are actually on.
@@ -507,11 +552,11 @@ def train_single_fold(fold_idx, target_gpu_id_for_this_fold):
             actual_model_device = next(model_rf.model.parameters()).device
             fold_py_logger.info(f"{MODEL_DESCRIPTOR} parameters are on device: {actual_model_device} after __init__.")
             if expected_model_init_device_type != actual_model_device.type:
-                 fold_py_logger.warning(f"WARNING: Expected model init device type '{expected_model_init_device_type}' but parameters are on '{actual_model_device.type}'. This might be an issue if devices are incompatible (e.g., CPU vs GPU).")
+                fold_py_logger.warning(f"WARNING: Expected model init device type '{expected_model_init_device_type}' but parameters are on '{actual_model_device.type}'. This might be an issue if devices are incompatible (e.g., CPU vs GPU).")
         except StopIteration: # Model might have no parameters yet, or structure is different
             fold_py_logger.warning(f"Could not determine actual model device after instantiation (model may have no parameters yet or a different structure).")
         except AttributeError: # model_rf.model might not exist
-             fold_py_logger.warning(f"Could not access model_rf.model.parameters() to determine device. Structure might be different.")
+            fold_py_logger.warning(f"Could not access model_rf.model.parameters() to determine device. Structure might be different.")
         except Exception as e_get_device:
             fold_py_logger.warning(f"Could not determine actual model device after instantiation due to an unexpected error: {e_get_device}")
 

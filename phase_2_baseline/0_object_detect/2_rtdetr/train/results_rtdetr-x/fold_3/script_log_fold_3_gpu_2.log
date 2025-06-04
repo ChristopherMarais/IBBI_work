@@ -1,0 +1,10 @@
+2025-05-27 13:34:10 - Fold-3_GPU-2 - INFO - Initializing training for Fold 3 on GPU 2 with model rtdetr-x.pt.
+2025-05-27 13:34:10 - Fold-3_GPU-2 - INFO - Data YAML: /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/data.yaml
+2025-05-27 13:34:10 - Fold-3_GPU-2 - INFO - Ultralytics project dir (base for this fold's runs): ./results_rtdetr-x/fold_3
+2025-05-27 13:34:10 - Fold-3_GPU-2 - INFO - Ultralytics run name (specific training run): rtdetr-x_e3_b16_imgsz640
+2025-05-27 13:34:10 - Fold-3_GPU-2 - INFO - Python-level stdout and stderr for this fold (for Ultralytics) are now redirected to: ./results_rtdetr-x/fold_3/ultralytics_output_fold_3_gpu_2.log
+2025-05-27 13:34:14 - Fold-3_GPU-2 - INFO - Loaded base model rtdetr-x.pt using ultralytics.RTDETR class.
+2025-05-27 13:34:14 - Fold-3_GPU-2 - INFO - Starting Ultralytics training with effective hyperparameters: {'epochs': 3, 'batch': 16, 'workers': 3, 'patience': 0, 'close_mosaic': 50, 'cache': False, 'imgsz': 640, 'optimizer': 'AdamW', 'lr0': 0.0001, 'lrf': 0.01, 'weight_decay': 0.0001, 'dropout': 0.0, 'pretrained': True, 'resume': False, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.1, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.5, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0, 'copy_paste': 0.0, 'save': True, 'save_period': 1, 'exist_ok': True, 'verbose': True, 'seed': 0, 'project': './results_rtdetr-x/fold_3', 'name': 'rtdetr-x_e3_b16_imgsz640', 'data': '/blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/ultralytics/cv_iteration_3/data.yaml', 'device': '2'}
+2025-05-27 15:55:32 - Fold-3_GPU-2 - INFO - Training completed successfully.
+2025-05-27 15:55:32 - Fold-3_GPU-2 - INFO - All Ultralytics results, metrics, and model weights saved in: results_rtdetr-x/fold_3/rtdetr-x_e3_b16_imgsz640
+2025-05-27 15:55:32 - Fold-3_GPU-2 - INFO - Restored stdout/stderr for this fold process.

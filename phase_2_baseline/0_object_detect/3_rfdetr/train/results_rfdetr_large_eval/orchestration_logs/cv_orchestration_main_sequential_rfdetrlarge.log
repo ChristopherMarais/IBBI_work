@@ -136,3 +136,24 @@ reinitializing your detection head with 1 classes.
 ========================= Starting Fold 1/5 =========================
 2025-06-02 15:20:00 - WARNING - num_classes mismatch: model has 90 classes, but your dataset has 1 classes
 reinitializing your detection head with 1 classes.
+2025-06-03 03:44:30 - INFO - Fold 1 processing finished. Log: ./results_rfdetr_large_eval/fold_1/script_log_fold_1_gpu_0.log
+2025-06-03 03:44:30 - INFO - ========================= Completed processing for Fold 1/5 =========================
+
+2025-06-03 03:44:30 - INFO - Cleared CUDA cache after Fold 1.
+2025-06-03 03:44:30 - INFO - 
+========================= Starting Fold 2/5 =========================
+2025-06-03 03:44:46 - WARNING - num_classes mismatch: model has 90 classes, but your dataset has 1 classes
+reinitializing your detection head with 1 classes.
+2025-06-03 11:41:25 - INFO - Executing RFDETRLarge Sequential Cross-Validation Training Script at 2025-06-03 11:41:25.125082.
+2025-06-03 11:41:25 - INFO - Starting 5-fold Cross-Validation for RFDETRLarge (SEQUENTIAL EXECUTION).
+2025-06-03 11:41:25 - INFO - Main results will be saved in: ./results_rfdetr_large_eval
+2025-06-03 11:41:25 - INFO - Base data path template: /blue/hulcr/gmarais/PhD/IBBI_work/phase_1_data/2_object_detection_phase_2/coco_rfdetr/coco/cv_iteration_{}
+2025-06-03 11:41:25 - INFO - Model: RFDETRLarge
+2025-06-03 11:41:25 - INFO - RFDETR Training Parameters (for .train() method): {'epochs': 3, 'batch_size': 1, 'grad_accum_steps': 32, 'lr': 0.0001, 'checkpoint_interval': 1}
+2025-06-03 11:41:25 - INFO - CUDA_LAUNCH_BLOCKING is set to 1 (helps with CUDA error reporting).
+2025-06-03 11:41:25 - INFO - TORCH_USE_CUDA_DSA is set to 1 (attempts detailed device-side assertions).
+2025-06-03 11:41:25 - INFO - All sequential folds will attempt to run on GPU: 0
+2025-06-03 11:41:25 - INFO - 
+========================= Starting Fold 1/5 =========================
+2025-06-03 11:41:36 - WARNING - num_classes mismatch: pretrain weights has 90 classes, but your model has 1 classes
+reinitializing detection head with 90 classes

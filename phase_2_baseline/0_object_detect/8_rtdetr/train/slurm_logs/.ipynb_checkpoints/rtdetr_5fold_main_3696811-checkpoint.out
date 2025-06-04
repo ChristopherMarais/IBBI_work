@@ -1,7 +1,0 @@
-Starting rtdetr 5-Fold Training Script
-Job ID: 3696811
-Running on host: c0803a-s11.ufhpc
-Assigned GPUs: 0,1,2,3,4
-Current working directory: /blue/hulcr/gmarais/PhD/IBBI_work/phase_2_baseline/0_object_detect/8_rtdetr/train
-Activating conda environment: EEL
-Failed to activate conda environment: EEL
